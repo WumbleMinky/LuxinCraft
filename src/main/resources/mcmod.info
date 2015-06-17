@@ -1,0 +1,17 @@
+[
+{
+  "modid": "LuxinCraft",
+  "name": "LuxinCraft",
+  "version": "1.0",
+  "mcversion": "1.8",
+    "description": "Become a drafter! Based on the magic from the Lightbringer book series by Brent Weeks.",
+  "credits": "",
+  "logoFile": "",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["WumbleMinky"],
+  "parent":"",
+  "screenshots": [],
+  "dependencies": []
+}
+]
