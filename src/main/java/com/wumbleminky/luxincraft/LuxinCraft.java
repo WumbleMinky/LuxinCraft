@@ -1,6 +1,7 @@
 package com.wumbleminky.luxincraft;
 
 import com.wumbleminky.luxincraft.handler.ConfigurationHandler;
+import com.wumbleminky.luxincraft.init.ModItems;
 import com.wumbleminky.luxincraft.proxy.IProxy;
 import com.wumbleminky.luxincraft.reference.Reference;
 import net.minecraftforge.fml.common.FMLCommonHandler;
@@ -24,11 +25,13 @@ public class LuxinCraft {
 
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+
+        ModItems.init();
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
-
+        proxy.registerRenders();
     }
 
     @Mod.EventHandler
