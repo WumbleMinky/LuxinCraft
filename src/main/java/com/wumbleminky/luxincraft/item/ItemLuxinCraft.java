@@ -24,4 +24,7 @@ public class ItemLuxinCraft extends Item {
         return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
     }
 
+    public String getName(){
+        return "";
+    }
 }

@@ -1,15 +1,15 @@
 package com.wumbleminky.luxincraft.item;
 
-public class ItemBlueLuxinPickaxe extends ItemLuxinCraft {
+import com.wumbleminky.luxincraft.reference.Names;
 
-    private final static String name = "blue_luxin_pickaxe";
+public class ItemBlueLuxinPickaxe extends ItemLuxinCraft {
 
     public ItemBlueLuxinPickaxe(){
         super();
-        this.setUnlocalizedName(ItemBlueLuxinPickaxe.name);
+        this.setUnlocalizedName(Names.Tools.BLUE_LUXIN_PICKAXE);
     }
 
     public String getName(){
-        return ItemBlueLuxinPickaxe.name;
+        return Names.Tools.BLUE_LUXIN_PICKAXE;
     }
 }
