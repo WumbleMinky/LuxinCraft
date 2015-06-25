@@ -1,6 +1,7 @@
 package com.wumbleminky.luxincraft;
 
 import com.wumbleminky.luxincraft.handler.ConfigurationHandler;
+import com.wumbleminky.luxincraft.init.ModBlocks;
 import com.wumbleminky.luxincraft.init.ModItems;
 import com.wumbleminky.luxincraft.proxy.IProxy;
 import com.wumbleminky.luxincraft.reference.Reference;
@@ -27,6 +28,7 @@ public class LuxinCraft {
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 
         ModItems.init();
+        ModBlocks.init();
     }
 
     @Mod.EventHandler

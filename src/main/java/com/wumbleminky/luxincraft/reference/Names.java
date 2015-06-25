@@ -3,7 +3,7 @@ package com.wumbleminky.luxincraft.reference;
 public class Names {
 
     public static final class Blocks {
-        public static final String SOLID_BLUE_LUXIN = "";
+        public static final String SOLID_BLUE_LUXIN = "block_blue_luxin_solid";
     }
 
     public static final class Items {
