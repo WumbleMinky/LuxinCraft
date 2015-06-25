@@ -7,7 +7,7 @@ public class Names {
     }
 
     public static final class Items {
-
+        public static final String SOFT_CLOTH = "soft_cloth";
     }
 
     public static final class Fluids {
