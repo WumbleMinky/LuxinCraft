@@ -2,14 +2,15 @@ package com.wumbleminky.luxincraft.item;
 
 import com.wumbleminky.luxincraft.creativetab.CreativeTabLC;
 import com.wumbleminky.luxincraft.reference.Reference;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 
-public abstract class ItemLuxinCraft extends Item {
+public class LuxinPickaxe extends ItemPickaxe{
 
-    public ItemLuxinCraft(){
-        super();
+    public LuxinPickaxe(ToolMaterial material, String name) {
+        super(material);
         setCreativeTab(CreativeTabLC.LuxinCraftTab);
+        this.setUnlocalizedName(name);
     }
 
     @Override

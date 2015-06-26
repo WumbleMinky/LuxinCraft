@@ -1,10 +1,15 @@
+# Items
 item.luxincraft:blue_luxin_pickaxe.name=Blue Luxin Pickaxe
+item.luxincraft:green_luxin_pickaxe.name=Green Luxin Pickaxe
+item.luxincraft:yellow_luxin_pickaxe.name=Yellow Luxin Pickaxe
 item.luxincraft:soft_cloth.name=Soft Cloth
 
+# Blocks
 tile.luxincraft:block_blue_luxin_solid.name=Solid Blue Luxin
 tile.luxincraft:block_green_luxin_solid.name=Solid Green Luxin
 tile.luxincraft:block_yellow_luxin_solid.name=Solid Yellow Luxin
 
+# Ores
 tile.luxincraft:ore_ruby.name=Ruby Ore
 tile.luxincraft:ore_sapphire.name=Sapphire Ore
 tile.luxincraft:ore_garnet.name=Garnet Ore
