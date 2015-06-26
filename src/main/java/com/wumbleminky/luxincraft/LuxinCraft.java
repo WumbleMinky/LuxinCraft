@@ -5,12 +5,14 @@ import com.wumbleminky.luxincraft.init.ModBlocks;
 import com.wumbleminky.luxincraft.init.ModItems;
 import com.wumbleminky.luxincraft.proxy.IProxy;
 import com.wumbleminky.luxincraft.reference.Reference;
+import com.wumbleminky.luxincraft.worldgen.LuxinCraftWorldGen;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid= Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class LuxinCraft {
@@ -29,6 +31,8 @@ public class LuxinCraft {
 
         ModItems.init();
         ModBlocks.init();
+
+        GameRegistry.registerWorldGenerator(new LuxinCraftWorldGen(), 2);
     }
 
     @Mod.EventHandler
