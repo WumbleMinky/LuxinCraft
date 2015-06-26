@@ -1,5 +1,6 @@
 package com.wumbleminky.luxincraft;
 
+import com.wumbleminky.luxincraft.client.handler.KeyInputEventHandler;
 import com.wumbleminky.luxincraft.handler.ConfigurationHandler;
 import com.wumbleminky.luxincraft.init.ModBlocks;
 import com.wumbleminky.luxincraft.init.ModItems;
@@ -32,12 +33,14 @@ public class LuxinCraft {
         ModItems.init();
         ModBlocks.init();
 
+        proxy.registerKeybindings();
         GameRegistry.registerWorldGenerator(new LuxinCraftWorldGen(), 2);
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
         proxy.registerRenders();
+        FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
     }
 
     @Mod.EventHandler

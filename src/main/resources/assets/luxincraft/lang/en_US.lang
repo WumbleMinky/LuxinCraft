@@ -14,3 +14,7 @@ tile.luxincraft:ore_ruby.name=Ruby Ore
 tile.luxincraft:ore_sapphire.name=Sapphire Ore
 tile.luxincraft:ore_garnet.name=Garnet Ore
 tile.luxincraft:ore_citrine.name=Citrine Ore
+
+# Keys
+keys.luxincraft.category=LuxinCraft
+keys.luxincraft.activate=Activate Power

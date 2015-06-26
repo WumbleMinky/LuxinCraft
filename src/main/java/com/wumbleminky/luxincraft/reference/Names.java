@@ -1,6 +1,6 @@
 package com.wumbleminky.luxincraft.reference;
 
-public class Names {
+public final class Names {
 
     public static final class Blocks {
         public static final String SOLID_BLUE_LUXIN = "block_blue_luxin_solid";
@@ -25,6 +25,11 @@ public class Names {
 
     public static final class Fluids {
 
+    }
+
+    public static final class Keys {
+        public static final String CATEGORY = "keys.luxincraft.category";
+        public static final String ACTIVATE = "keys.luxincraft.activate";
     }
 
     public static final class Tools {
