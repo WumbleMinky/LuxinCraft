@@ -17,13 +17,21 @@ public class ModItems {
     public static final LuxinPickaxe yellowLuxinPickaxe = new LuxinPickaxe(Material.Tools.YELLOW_LUXIN, Names.Tools.YELLOW_LUXIN_PICKAXE);
 
     //Items
-    public static final ItemSoftCloth softCloth = new ItemSoftCloth();
+    public static final ItemLuxinCraft softCloth = new ItemSoftCloth();
+    public static final ItemLuxinCraft ruby = new ItemRuby();
+    public static final ItemLuxinCraft sapphire = new ItemSapphire();
+    public static final ItemLuxinCraft garnet = new ItemGarnet();
+    public static final ItemLuxinCraft citrine = new ItemCitrine();
 
     public static void init(){
         GameRegistry.registerItem(blueLuxinPickaxe, Names.Tools.BLUE_LUXIN_PICKAXE);
         GameRegistry.registerItem(greenLuxinPickaxe, Names.Tools.GREEN_LUXIN_PICKAXE);
         GameRegistry.registerItem(yellowLuxinPickaxe, Names.Tools.YELLOW_LUXIN_PICKAXE);
         GameRegistry.registerItem(softCloth, Names.Items.SOFT_CLOTH);
+        GameRegistry.registerItem(ruby, Names.Items.RUBY);
+        GameRegistry.registerItem(sapphire, Names.Items.SAPPHIRE);
+        GameRegistry.registerItem(garnet, Names.Items.GARNET);
+        GameRegistry.registerItem(citrine, Names.Items.CITRINE);
     }
 
     public static void registerRenders(){
@@ -31,6 +39,10 @@ public class ModItems {
         registerRender(greenLuxinPickaxe);
         registerRender(yellowLuxinPickaxe);
         registerRender(softCloth);
+        registerRender(ruby);
+        registerRender(sapphire);
+        registerRender(garnet);
+        registerRender(citrine);
     }
 
     public static void registerRender(Item item){

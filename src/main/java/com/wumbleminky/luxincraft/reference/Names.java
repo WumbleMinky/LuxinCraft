@@ -15,6 +15,10 @@ public final class Names {
 
     public static final class Items {
         public static final String SOFT_CLOTH = "soft_cloth";
+        public static final String RUBY = "ruby";
+        public static final String SAPPHIRE = "sapphire";
+        public static final String GARNET = "garnet";
+        public static final String CITRINE = "citrine";
     }
 
     public static final class Materials {

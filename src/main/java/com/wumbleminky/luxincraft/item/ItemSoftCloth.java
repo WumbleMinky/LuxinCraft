@@ -9,7 +9,4 @@ public class ItemSoftCloth extends ItemLuxinCraft {
         this.setUnlocalizedName(Names.Items.SOFT_CLOTH);
     }
 
-    public String getName(){
-        return Names.Items.SOFT_CLOTH;
-    }
 }
