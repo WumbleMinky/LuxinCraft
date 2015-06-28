@@ -7,6 +7,7 @@ import com.wumbleminky.luxincraft.init.ModItems;
 import com.wumbleminky.luxincraft.proxy.IProxy;
 import com.wumbleminky.luxincraft.reference.Reference;
 import com.wumbleminky.luxincraft.worldgen.LuxinCraftWorldGen;
+import net.minecraft.item.EnumDyeColor;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;

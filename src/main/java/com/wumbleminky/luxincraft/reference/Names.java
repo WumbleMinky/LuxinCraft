@@ -1,6 +1,14 @@
 package com.wumbleminky.luxincraft.reference;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 public final class Names {
+
+    public static final String[] LUXIN_COLOURS = new String[] {"subred", "red", "orange", "yellow", "green", "blue", "superviolet"};
+    public static final String[] SOLID_LUXINS = Arrays.copyOfRange(LUXIN_COLOURS,3,6);
+    public static final String[] VISIBLE_LUXINS = Arrays.copyOfRange(LUXIN_COLOURS, 1, 7);
 
     public static final class Blocks {
         public static final String SOLID_BLUE_LUXIN = "block_blue_luxin_solid";
@@ -15,6 +23,15 @@ public final class Names {
 
     public static final class Items {
         public static final String SOFT_CLOTH = "soft_cloth";
+        public static final String LENSE_CLEAR = "lense_clear";
+        public static final String LENSE_BLUE = "lense_blue";
+        public static final String LENSE_GREEN = "lense_green";
+        public static final String LENSE_ORANGE = "lense_orange";
+        public static final String LENSE_YELLOW = "lense_yellow";
+        public static final String LENSE_RED = "lense_red";
+        public static final String[] LENSES = new String[]{LENSE_BLUE, LENSE_RED, LENSE_YELLOW, LENSE_ORANGE, LENSE_GREEN, LENSE_CLEAR};
+
+        //gems
         public static final String RUBY = "ruby";
         public static final String SAPPHIRE = "sapphire";
         public static final String GARNET = "garnet";

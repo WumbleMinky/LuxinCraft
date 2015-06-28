@@ -22,6 +22,12 @@ public class ModItems {
     public static final ItemLuxinCraft sapphire = new ItemSapphire();
     public static final ItemLuxinCraft garnet = new ItemGarnet();
     public static final ItemLuxinCraft citrine = new ItemCitrine();
+    public static final ItemLuxinCraft lenseClear = new ItemLense(Names.Items.LENSE_CLEAR);
+    public static final ItemLuxinCraft lenseBlue = new ItemLense(Names.Items.LENSE_BLUE);
+    public static final ItemLuxinCraft lenseRed = new ItemLense(Names.Items.LENSE_RED);
+    public static final ItemLuxinCraft lenseOrange = new ItemLense(Names.Items.LENSE_ORANGE);
+    public static final ItemLuxinCraft lenseGreen = new ItemLense(Names.Items.LENSE_GREEN);
+    public static final ItemLuxinCraft lenseYellow = new ItemLense(Names.Items.LENSE_YELLOW);
 
     public static void init(){
         GameRegistry.registerItem(blueLuxinPickaxe, Names.Tools.BLUE_LUXIN_PICKAXE);
@@ -32,6 +38,13 @@ public class ModItems {
         GameRegistry.registerItem(sapphire, Names.Items.SAPPHIRE);
         GameRegistry.registerItem(garnet, Names.Items.GARNET);
         GameRegistry.registerItem(citrine, Names.Items.CITRINE);
+        GameRegistry.registerItem(lenseClear, Names.Items.LENSE_CLEAR);
+        GameRegistry.registerItem(lenseBlue, Names.Items.LENSE_BLUE);
+        GameRegistry.registerItem(lenseGreen, Names.Items.LENSE_GREEN);
+        GameRegistry.registerItem(lenseOrange, Names.Items.LENSE_ORANGE);
+        GameRegistry.registerItem(lenseRed, Names.Items.LENSE_RED);
+        GameRegistry.registerItem(lenseYellow, Names.Items.LENSE_YELLOW);
+
     }
 
     public static void registerRenders(){
@@ -43,6 +56,12 @@ public class ModItems {
         registerRender(sapphire);
         registerRender(garnet);
         registerRender(citrine);
+        registerRender(lenseRed);
+        registerRender(lenseYellow);
+        registerRender(lenseOrange);
+        registerRender(lenseGreen);
+        registerRender(lenseBlue);
+        registerRender(lenseClear);
     }
 
     public static void registerRender(Item item){

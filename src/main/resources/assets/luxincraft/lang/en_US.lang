@@ -7,6 +7,12 @@ item.luxincraft:ruby.name=Ruby
 item.luxincraft:sapphire.name=Sapphire
 item.luxincraft:garnet.name=Garnet
 item.luxincraft:citrine.name=Citrine
+item.luxincraft:lense_clear.name=Clear Lense
+item.luxincraft:lense_red.name=Red Lense
+item.luxincraft:lense_orange.name=Orange Lense
+item.luxincraft:lense_yellow.name=Yellow Lense
+item.luxincraft:lense_green.name=Green Lense
+item.luxincraft:lense_blue.name=Blue Lense
 
 # Blocks
 tile.luxincraft:block_blue_luxin_solid.name=Solid Blue Luxin
