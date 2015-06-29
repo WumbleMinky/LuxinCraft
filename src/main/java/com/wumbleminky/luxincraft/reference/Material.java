@@ -1,6 +1,7 @@
 package com.wumbleminky.luxincraft.reference;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class Material {
@@ -10,5 +11,9 @@ public class Material {
         public static final Item.ToolMaterial GREEN_LUXIN = EnumHelper.addToolMaterial(Names.Materials.GREEN_LUXIN, 1, 300, 6.0F, 1.0F, 5);
         public static final Item.ToolMaterial YELLOW_LUXIN = EnumHelper.addToolMaterial(Names.Materials.YELLOW_LUXIN, 3, 1500, 8.0F, 3.0F, 5);
 
+    }
+
+    public static final class Armors{
+        public static final ItemArmor.ArmorMaterial BLUE_GLASSES = EnumHelper.addArmorMaterial(Names.Materials.BLUE_GLASSES, Reference.MOD_ID + ":glasses_blue", 10, new int[]{0,0,0,0}, 0);
     }
 }

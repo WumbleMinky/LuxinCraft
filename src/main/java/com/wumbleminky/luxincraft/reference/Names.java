@@ -38,10 +38,16 @@ public final class Names {
         public static final String CITRINE = "citrine";
     }
 
+    public static final class Armors {
+        public static final String BLUE_GLASSES = "glasses_blue";
+    }
+
     public static final class Materials {
         public static final String BLUE_LUXIN = "blue_luxin";
         public static final String GREEN_LUXIN = "green_luxin";
         public static final String YELLOW_LUXIN = "yellow_luxin";
+
+        public static final String BLUE_GLASSES = "glasses_blue";
     }
 
     public static final class Fluids {

@@ -29,6 +29,9 @@ public class ModItems {
     public static final ItemLuxinCraft lenseGreen = new ItemLense(Names.Items.LENSE_GREEN);
     public static final ItemLuxinCraft lenseYellow = new ItemLense(Names.Items.LENSE_YELLOW);
 
+    //Armours
+    public static final ItemArmorLuxinCraft blueGlasses = new ItemArmorLuxinCraft(Names.Armors.BLUE_GLASSES, Material.Armors.BLUE_GLASSES, 1, 0);
+
     public static void init(){
         GameRegistry.registerItem(blueLuxinPickaxe, Names.Tools.BLUE_LUXIN_PICKAXE);
         GameRegistry.registerItem(greenLuxinPickaxe, Names.Tools.GREEN_LUXIN_PICKAXE);
@@ -44,6 +47,7 @@ public class ModItems {
         GameRegistry.registerItem(lenseOrange, Names.Items.LENSE_ORANGE);
         GameRegistry.registerItem(lenseRed, Names.Items.LENSE_RED);
         GameRegistry.registerItem(lenseYellow, Names.Items.LENSE_YELLOW);
+        GameRegistry.registerItem(blueGlasses, Names.Armors.BLUE_GLASSES);
 
     }
 
@@ -62,6 +66,7 @@ public class ModItems {
         registerRender(lenseGreen);
         registerRender(lenseBlue);
         registerRender(lenseClear);
+        registerRender(blueGlasses);
     }
 
     public static void registerRender(Item item){
