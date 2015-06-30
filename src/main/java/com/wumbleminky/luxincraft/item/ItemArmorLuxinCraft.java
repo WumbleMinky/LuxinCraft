@@ -7,9 +7,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemArmorLuxinCraft extends ItemArmor {
 
-    public ItemArmorLuxinCraft(String name, ArmorMaterial material, int renderIndex, int armorType){
+    public ItemArmorLuxinCraft(ArmorMaterial material, int renderIndex, int armorType){
         super(material, renderIndex, armorType);
-        setUnlocalizedName(name);
         setCreativeTab(CreativeTabLC.LuxinCraftTab);
     }
 

@@ -39,7 +39,7 @@ public final class Names {
     }
 
     public static final class Armors {
-        public static final String BLUE_GLASSES = "glasses_blue";
+        public static final String SPECTACLES = "spectacles";
     }
 
     public static final class Materials {
@@ -47,7 +47,7 @@ public final class Names {
         public static final String GREEN_LUXIN = "green_luxin";
         public static final String YELLOW_LUXIN = "yellow_luxin";
 
-        public static final String BLUE_GLASSES = "glasses_blue";
+        public static final String SPECTACLES = "spectacles";
     }
 
     public static final class Fluids {
@@ -63,5 +63,10 @@ public final class Names {
         public static final String BLUE_LUXIN_PICKAXE = "blue_luxin_pickaxe";
         public static final String GREEN_LUXIN_PICKAXE = "green_luxin_pickaxe";
         public static final String YELLOW_LUXIN_PICKAXE = "yellow_luxin_pickaxe";
+    }
+
+    public static final class NBT {
+        public static final String DISPLAY = "display";
+        public static final String COLOR = "luxincolor";
     }
 }

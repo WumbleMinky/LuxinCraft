@@ -15,7 +15,7 @@ item.luxincraft:lense_green.name=Green Lense
 item.luxincraft:lense_blue.name=Blue Lense
 
 #Armors
-item.luxincraft:glasses_blue.name=Blue Spectacles
+item.luxincraft:spectacles.name=Spectacles
 
 # Blocks
 tile.luxincraft:block_blue_luxin_solid.name=Solid Blue Luxin
