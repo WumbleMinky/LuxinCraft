@@ -19,6 +19,8 @@ public class ModBlocks {
     public static final BlockLuxinCraft oreGarnet = new BlockOre(Names.Blocks.ORE_GARNET);
     public static final BlockLuxinCraft oreCitrine = new BlockOre(Names.Blocks.ORE_CITRINE);
 
+    public static final BlockLuxinCraft worktable = new BlockWorktable();
+
     public static void init(){
         registerBlock(solidBlueLuxin);
         registerBlock(solidGreenLuxin);
@@ -27,6 +29,7 @@ public class ModBlocks {
         registerBlock(oreSapphire);
         registerBlock(oreGarnet);
         registerBlock(oreCitrine);
+        registerBlock(worktable);
     }
 
     public static void registerBlock(BlockLuxinCraft block){
@@ -41,6 +44,7 @@ public class ModBlocks {
         registerRender(oreSapphire);
         registerRender(oreGarnet);
         registerRender(oreCitrine);
+        registerRender(worktable);
     }
 
     public static void registerRender(BlockLuxinCraft block){

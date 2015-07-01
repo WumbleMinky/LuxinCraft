@@ -9,7 +9,4 @@ public class BlockSolidGreenLuxin extends BlockLuxinCraft {
         setUnlocalizedName(Names.Blocks.SOLID_GREEN_LUXIN);
     }
 
-    public String getName(){
-        return Names.Blocks.SOLID_GREEN_LUXIN;
-    }
 }

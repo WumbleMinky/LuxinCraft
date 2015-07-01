@@ -26,6 +26,6 @@ public class BlockLuxinCraft extends Block {
     }
 
     public String getName(){
-        return null;
+        return getUnlocalizedName().substring(getUnlocalizedName().indexOf(":") + 1);
     }
 }

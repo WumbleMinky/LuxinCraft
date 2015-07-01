@@ -9,7 +9,4 @@ public class BlockSolidYellowLuxin extends BlockLuxinCraft {
         setUnlocalizedName(Names.Blocks.SOLID_YELLOW_LUXIN);
     }
 
-    public String getName(){
-        return Names.Blocks.SOLID_YELLOW_LUXIN;
-    }
 }

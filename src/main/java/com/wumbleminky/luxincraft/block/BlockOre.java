@@ -40,7 +40,4 @@ public class BlockOre extends BlockLuxinCraft {
         return 1;
     }
 
-    public String getName(){
-        return getUnlocalizedName().substring(getUnlocalizedName().indexOf(":")+1);
-    }
 }

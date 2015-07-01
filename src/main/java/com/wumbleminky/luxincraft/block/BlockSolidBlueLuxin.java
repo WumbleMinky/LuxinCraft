@@ -8,8 +8,4 @@ public class BlockSolidBlueLuxin extends BlockLuxinCraft {
         super();
         setUnlocalizedName(Names.Blocks.SOLID_BLUE_LUXIN);
     }
-
-    public String getName(){
-        return Names.Blocks.SOLID_BLUE_LUXIN;
-    }
 }

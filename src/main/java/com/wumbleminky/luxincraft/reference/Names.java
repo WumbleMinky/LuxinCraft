@@ -19,6 +19,8 @@ public final class Names {
         public static final String ORE_SAPPHIRE = "ore_sapphire";
         public static final String ORE_GARNET = "ore_garnet";
         public static final String ORE_CITRINE = "ore_citrine";
+
+        public static final String WORKTABLE = "block_worktable";
     }
 
     public static final class Items {
