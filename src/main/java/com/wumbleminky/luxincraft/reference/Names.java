@@ -29,6 +29,7 @@ public final class Names {
         public static final String LENSE_ORANGE = "lense_orange";
         public static final String LENSE_YELLOW = "lense_yellow";
         public static final String LENSE_RED = "lense_red";
+        public static final String LENSE = "lense";
         public static final String[] LENSES = new String[]{LENSE_BLUE, LENSE_RED, LENSE_YELLOW, LENSE_ORANGE, LENSE_GREEN, LENSE_CLEAR};
 
         //gems
