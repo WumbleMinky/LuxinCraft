@@ -16,6 +16,7 @@ item.luxincraft:spectacles.name=Spectacles
 tile.luxincraft:block_blue_luxin_solid.name=Solid Blue Luxin
 tile.luxincraft:block_green_luxin_solid.name=Solid Green Luxin
 tile.luxincraft:block_yellow_luxin_solid.name=Solid Yellow Luxin
+tile.luxincraft:block_worktable.name=Worktable
 
 # Ores
 tile.luxincraft:ore_ruby.name=Ruby Ore

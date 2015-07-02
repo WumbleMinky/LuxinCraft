@@ -4,10 +4,10 @@ import com.wumbleminky.luxincraft.client.handler.KeyInputEventHandler;
 import com.wumbleminky.luxincraft.handler.ConfigurationHandler;
 import com.wumbleminky.luxincraft.init.ModBlocks;
 import com.wumbleminky.luxincraft.init.ModItems;
+import com.wumbleminky.luxincraft.init.TileEntities;
 import com.wumbleminky.luxincraft.proxy.IProxy;
 import com.wumbleminky.luxincraft.reference.Reference;
 import com.wumbleminky.luxincraft.worldgen.LuxinCraftWorldGen;
-import net.minecraft.item.EnumDyeColor;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -41,6 +41,7 @@ public class LuxinCraft {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
         proxy.registerRenders();
+        TileEntities.init();
         FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
     }
 
