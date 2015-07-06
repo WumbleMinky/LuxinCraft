@@ -2,10 +2,12 @@ package com.wumbleminky.luxincraft.block;
 
 import com.wumbleminky.luxincraft.reference.Names;
 import com.wumbleminky.luxincraft.tileentity.TileEntityWorktable;
+import com.wumbleminky.luxincraft.utility.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -13,6 +15,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 public class BlockWorktable extends BlockLuxinCraft implements ITileEntityProvider {
@@ -29,6 +32,19 @@ public class BlockWorktable extends BlockLuxinCraft implements ITileEntityProvid
         return false;
     }
 
+    public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack){
+        EnumFacing enumfacing = EnumFacing.getHorizontal(MathHelper.floor_double((double) (placer.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3).getOpposite();
+
+        TileEntity te = world.getTileEntity(pos);
+        if (te instanceof TileEntityWorktable){
+            TileEntityWorktable teWorktable = (TileEntityWorktable)te;
+            teWorktable.setFacing(enumfacing);
+        }
+
+        super.onBlockPlacedBy(world,pos,state,placer,stack);
+    }
+
+
     public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumFacing side, float hitX, float hitY, float hitZ) {
         if (world.isRemote) {
             return true;
@@ -37,7 +53,7 @@ public class BlockWorktable extends BlockLuxinCraft implements ITileEntityProvid
             TileEntity te  = world.getTileEntity(pos);
             if (te instanceof TileEntityWorktable){
                 TileEntityWorktable tileEntityWorktable = (TileEntityWorktable)te;
-
+                LogHelper.info("Facing:" + tileEntityWorktable.getFacing().toString());
                 //remove the current item
                 if (tileEntityWorktable.hasInventory()){
                     ItemStack inventory = tileEntityWorktable.getInventory();
@@ -62,7 +78,7 @@ public class BlockWorktable extends BlockLuxinCraft implements ITileEntityProvid
                 return true;
             }
         }
-        return false;
+        return true;
     }
 
     @Override
