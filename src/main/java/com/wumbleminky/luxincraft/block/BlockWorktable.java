@@ -2,7 +2,6 @@ package com.wumbleminky.luxincraft.block;
 
 import com.wumbleminky.luxincraft.reference.Names;
 import com.wumbleminky.luxincraft.tileentity.TileEntityWorktable;
-import com.wumbleminky.luxincraft.utility.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
@@ -53,7 +52,6 @@ public class BlockWorktable extends BlockLuxinCraft implements ITileEntityProvid
             TileEntity te  = world.getTileEntity(pos);
             if (te instanceof TileEntityWorktable){
                 TileEntityWorktable tileEntityWorktable = (TileEntityWorktable)te;
-                LogHelper.info("Facing:" + tileEntityWorktable.getFacing().toString());
                 //remove the current item
                 if (tileEntityWorktable.hasInventory()){
                     ItemStack inventory = tileEntityWorktable.getInventory();

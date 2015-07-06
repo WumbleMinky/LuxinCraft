@@ -71,5 +71,7 @@ public final class Names {
     public static final class NBT {
         public static final String DISPLAY = "display";
         public static final String COLOR = "luxincolor";
+        public static final String INVENTORY = "inventory";
+        public static final String FACING = "facing";
     }
 }

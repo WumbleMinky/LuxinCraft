@@ -1,5 +1,6 @@
 package com.wumbleminky.luxincraft.tileentity;
 
+import com.wumbleminky.luxincraft.reference.Names;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -28,10 +29,10 @@ public class TileEntityWorktable extends TileEntity {
             NBTTagCompound invCompound = new NBTTagCompound();
             inventory.writeToNBT(invCompound);
             tagList.appendTag(invCompound);
-            nbtTagCompound.setTag("inventory", tagList);
+            nbtTagCompound.setTag(Names.NBT.INVENTORY, tagList);
         }
         if (facing != null){
-            nbtTagCompound.setInteger("facing", facing.getIndex());
+            nbtTagCompound.setInteger(Names.NBT.FACING, facing.getIndex());
         }
     }
 
@@ -39,14 +40,14 @@ public class TileEntityWorktable extends TileEntity {
     public void readFromNBT(NBTTagCompound nbtTagCompound)
     {
         super.readFromNBT(nbtTagCompound);
-        NBTTagList tagList = nbtTagCompound.getTagList("inventory", 10);
+        NBTTagList tagList = nbtTagCompound.getTagList(Names.NBT.INVENTORY, 10);
         if (tagList.tagCount() > 0){
             inventory = ItemStack.loadItemStackFromNBT(tagList.getCompoundTagAt(0));
         }else{
             inventory = null;
         }
-        if (nbtTagCompound.hasKey("facing")){
-            facing = EnumFacing.getFront(nbtTagCompound.getInteger("facing"));
+        if (nbtTagCompound.hasKey(Names.NBT.FACING)){
+            facing = EnumFacing.getFront(nbtTagCompound.getInteger(Names.NBT.FACING));
         }else{
             facing = null;
         }

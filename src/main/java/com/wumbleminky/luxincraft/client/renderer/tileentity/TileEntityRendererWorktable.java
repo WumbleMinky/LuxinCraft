@@ -19,13 +19,17 @@ public class TileEntityRendererWorktable extends TileEntitySpecialRenderer {
     @Override
     public void renderTileEntityAt(TileEntity tileEntity, double relativeX, double relativeY, double relativeZ, float partialTicks, int blockDamageProgress) {
         if (!(tileEntity instanceof TileEntityWorktable)) return;
+
         TileEntityWorktable teWorktable = (TileEntityWorktable)tileEntity;
         if (!(teWorktable.hasInventory())) return;
+
         EntityItem inventoryEntity = new EntityItem(teWorktable.getWorld());
         inventoryEntity.hoverStart = 0.0f;
         inventoryEntity.setEntityItemStack(teWorktable.getInventory());
+
         GL11.glPushMatrix();
         GlStateManager.translate(relativeX + 0.5, relativeY+ 0.8, relativeZ + 0.5);
+
         if (teWorktable.getFacing() == EnumFacing.EAST){
             GlStateManager.rotate(-90, 0, 1, 0);
         }else if(teWorktable.getFacing() == EnumFacing.SOUTH){
@@ -33,6 +37,7 @@ public class TileEntityRendererWorktable extends TileEntitySpecialRenderer {
         }else if(teWorktable.getFacing() == EnumFacing.WEST){
             GlStateManager.rotate(90, 0, 1, 0);
         }
+        //rotate items to be flat on the table
         if (!(teWorktable.getInventory().getItem() instanceof ItemBlock)){
             GlStateManager.translate(0f,0.25f,0f);
             GlStateManager.rotate(90f,1f,0f,0f);
