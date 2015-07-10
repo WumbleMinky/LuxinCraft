@@ -14,6 +14,6 @@ public class Material {
     }
 
     public static final class Armors{
-        public static final ItemArmor.ArmorMaterial SPECTACLES = EnumHelper.addArmorMaterial(Names.Materials.SPECTACLES, Reference.MOD_ID + ":" + Names.Materials.SPECTACLES, 10, new int[]{0,0,0,0}, 0);
+        public static final ItemArmor.ArmorMaterial SPECTACLES = EnumHelper.addArmorMaterial(Names.Materials.SPECTACLES, Reference.withMODID(Names.Materials.SPECTACLES), 10, new int[]{0,0,0,0}, 0);
     }
 }

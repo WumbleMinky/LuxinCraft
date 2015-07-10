@@ -1,13 +1,17 @@
 package com.wumbleminky.luxincraft;
 
 import com.wumbleminky.luxincraft.client.handler.KeyInputEventHandler;
+import com.wumbleminky.luxincraft.client.handler.ModelBakeEventHandler;
 import com.wumbleminky.luxincraft.handler.ConfigurationHandler;
+import com.wumbleminky.luxincraft.handler.FluidHandler;
 import com.wumbleminky.luxincraft.init.ModBlocks;
+import com.wumbleminky.luxincraft.init.ModFluids;
 import com.wumbleminky.luxincraft.init.ModItems;
 import com.wumbleminky.luxincraft.init.TileEntities;
 import com.wumbleminky.luxincraft.proxy.IProxy;
 import com.wumbleminky.luxincraft.reference.Reference;
 import com.wumbleminky.luxincraft.worldgen.LuxinCraftWorldGen;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -33,16 +37,21 @@ public class LuxinCraft {
 
         ModItems.init();
         ModBlocks.init();
-
+        ModFluids.init();
+        //proxy.registerSided();
+        proxy.registerVariants();
         proxy.registerKeybindings();
         GameRegistry.registerWorldGenerator(new LuxinCraftWorldGen(), 2);
+        MinecraftForge.EVENT_BUS.register(ModelBakeEventHandler.instance);
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
         proxy.registerRenders();
         TileEntities.init();
+        MinecraftForge.EVENT_BUS.register(new FluidHandler());
         FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
+
     }
 
     @Mod.EventHandler

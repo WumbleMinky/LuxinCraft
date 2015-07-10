@@ -5,6 +5,7 @@ import com.wumbleminky.luxincraft.reference.Material;
 import com.wumbleminky.luxincraft.reference.Names;
 import com.wumbleminky.luxincraft.reference.Reference;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -55,7 +56,11 @@ public class ModItems {
     }
 
     public static void registerRender(Item item){
-        String itemname = item.getUnlocalizedName().substring(item.getUnlocalizedName().indexOf(":")+1);
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + itemname, "inventory"));
+        registerRender(item,0,Names.getName(item));
+    }
+
+    public static void registerRender(Item item, int metadata, String itemName){
+        ItemModelMesher modelRegistry = Minecraft.getMinecraft().getRenderItem().getItemModelMesher();
+        modelRegistry.register(item, metadata, new ModelResourceLocation(Reference.withMODID(itemName), "inventory"));
     }
 }

@@ -1,5 +1,8 @@
 package com.wumbleminky.luxincraft.reference;
 
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,6 +12,22 @@ public final class Names {
     public static final String[] LUXIN_COLOURS = new String[] {"subred", "red", "orange", "yellow", "green", "blue", "superviolet"};
     public static final String[] SOLID_LUXINS = Arrays.copyOfRange(LUXIN_COLOURS,3,6);
     public static final String[] VISIBLE_LUXINS = Arrays.copyOfRange(LUXIN_COLOURS, 1, 7);
+
+    public static String getUnwrappedName(String unlocalizedName){
+        return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
+    }
+
+    public static String getName(String unlocalizedName){
+        return unlocalizedName.substring(unlocalizedName.indexOf(":") + 1);
+    }
+
+    public static String getName(Block block){
+        return getName(block.getUnlocalizedName());
+    }
+
+    public static String getName(Item item){
+        return getName(item.getUnlocalizedName());
+    }
 
     public static final class Blocks {
         public static final String SOLID_BLUE_LUXIN = "block_blue_luxin_solid";
@@ -21,10 +40,16 @@ public final class Names {
         public static final String ORE_CITRINE = "ore_citrine";
 
         public static final String WORKTABLE = "block_worktable";
+
+        public static final String FLUID_YELLOW_LUXIN = "block_fluid_yellow_luxin";
     }
 
     public static final class Items {
         public static final String SOFT_CLOTH = "soft_cloth";
+        public static final String BUCKET = "bucket";
+        public static final String BUCKET_YELLOW_LUXIN = "bucket_yellow_luxin";
+
+        //lenses
         public static final String LENSE_CLEAR = "lense_clear";
         public static final String LENSE_BLUE = "lense_blue";
         public static final String LENSE_GREEN = "lense_green";
@@ -54,7 +79,7 @@ public final class Names {
     }
 
     public static final class Fluids {
-
+        public static final String YELLOW_LUXIN = "yellow_luxin";
     }
 
     public static final class Keys {
@@ -73,5 +98,10 @@ public final class Names {
         public static final String COLOR = "luxincolor";
         public static final String INVENTORY = "inventory";
         public static final String FACING = "facing";
+    }
+
+    public static final class Textures {
+        public static final String STILL_YELLOW_LUXIN = "blocks/fluid_yellow_luxin_still";
+        public static final String FLOWING_YELLOW_LUXIN = "blocks/fluid_yellow_luxin_flowing";
     }
 }

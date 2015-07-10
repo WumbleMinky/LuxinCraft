@@ -22,7 +22,7 @@ public class BlockOre extends BlockLuxinCraft {
 
     @Override
     public Item getItemDropped(IBlockState blockState, Random random, int fortune ){
-        String name = this.getName();
+        String name = Names.getName(this);
         if (name.equals(Names.Blocks.ORE_RUBY)){
             return ModItems.ruby;
         }else if (name.equals(Names.Blocks.ORE_SAPPHIRE)){
