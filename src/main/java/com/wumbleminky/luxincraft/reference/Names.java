@@ -98,6 +98,7 @@ public final class Names {
         public static final String COLOR = "luxincolor";
         public static final String INVENTORY = "inventory";
         public static final String FACING = "facing";
+        public static final String LIFESPAN_IN_TICKS = "lifespanInTicks";
     }
 
     public static final class Textures {

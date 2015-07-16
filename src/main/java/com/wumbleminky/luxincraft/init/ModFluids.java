@@ -3,7 +3,9 @@ package com.wumbleminky.luxincraft.init;
 import com.wumbleminky.luxincraft.block.BlockFluid;
 import com.wumbleminky.luxincraft.item.ItemLuxinCraftBucket;
 import com.wumbleminky.luxincraft.reference.Names;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialLiquid;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -17,6 +19,7 @@ public class ModFluids {
     public static final ItemLuxinCraftBucket bucket = new ItemLuxinCraftBucket();
 
     public static void init(){
+        fluidYellowLuxin.setLuminosity(15);
         FluidRegistry.registerFluid(fluidYellowLuxin);
 
         blockFluidYellowLuxin = new BlockFluid(fluidYellowLuxin, Material.water, Names.Fluids.YELLOW_LUXIN);

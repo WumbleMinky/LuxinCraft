@@ -1,5 +1,6 @@
 package com.wumbleminky.luxincraft.proxy;
 
+import com.wumbleminky.luxincraft.block.BlockFluid;
 import com.wumbleminky.luxincraft.client.renderer.tileentity.TileEntityRendererWorktable;
 import com.wumbleminky.luxincraft.client.settings.Keybindings;
 import com.wumbleminky.luxincraft.init.ModBlocks;

@@ -27,8 +27,7 @@ public class PropertyFloat implements IUnlistedProperty<Float>
 	}
 	
 	@Override
-	public boolean isValid(Float value)
-	{
+	public boolean isValid(Float value)	{
 		return minValue > maxValue || (value >= minValue && value <= maxValue);
 	}
 	

@@ -1,14 +1,26 @@
 package com.wumbleminky.luxincraft.block;
 
+import com.wumbleminky.luxincraft.client.EntityFXLuxinCraft;
+import com.wumbleminky.luxincraft.reference.Colors;
+import com.wumbleminky.luxincraft.tileentity.TileEntityFluidYellowLuxin;
+import com.wumbleminky.luxincraft.utility.LogHelper;
 import com.wumbleminky.luxincraft.utility.PropertyFloat;
 import net.minecraft.block.Block;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.particle.EntityFireworkSparkFX;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 import net.minecraftforge.common.property.ExtendedBlockState;
 import net.minecraftforge.common.property.IExtendedBlockState;
 import net.minecraftforge.common.property.IUnlistedProperty;
@@ -16,14 +28,18 @@ import net.minecraftforge.fluids.BlockFluidBase;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.IFluidBlock;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockFluid extends BlockFluidClassic{
+import java.util.Random;
+
+public class BlockFluid extends BlockFluidClassic implements ITileEntityProvider {
 	public static final PropertyFloat HEIGHT_NW = new PropertyFloat("height_nw", 0F, 1F), HEIGHT_SW = new PropertyFloat("height_sw", 0F, 1F),
 			HEIGHT_SE = new PropertyFloat("height_se", 0F, 1F), HEIGHT_NE = new PropertyFloat("height_ne", 0F, 1F);
 	public static final PropertyFloat FLOW_DIRECTION = new PropertyFloat("flow_direction");
 	
 	public BlockFluid(Fluid fluid, Material material, String name){
-		super(fluid, material);
+        super(fluid, material);
         this.setUnlocalizedName(name);
 	}
 	
@@ -65,7 +81,6 @@ public class BlockFluid extends BlockFluidClassic{
 		extState = extState.withProperty(HEIGHT_NW, heightNW).withProperty(HEIGHT_SW, heightSW);
 		extState = extState.withProperty(HEIGHT_SE, heightSE).withProperty(HEIGHT_NE, heightNE);
 		extState = extState.withProperty(FLOW_DIRECTION, (float) BlockFluidBase.getFlowDirection(world, pos));
-		
 		return extState;
 	}
 	
@@ -117,5 +132,35 @@ public class BlockFluid extends BlockFluidClassic{
 	public int getRenderType(){
 		return 3;
 	}
-	
+
+    @Override
+    public int getLightValue(IBlockAccess world, BlockPos pos){
+        if (this.maxScaledLight == 0){
+            return super.getLightValue(world, pos);
+        }
+        return this.maxScaledLight;
+    }
+
+    @Override
+    public boolean isSourceBlock(IBlockAccess world, BlockPos pos){
+        return world.getBlockState(pos).getBlock() == this && ((Integer)world.getBlockState(pos).getValue(LEVEL)) == 0;
+    }
+
+	@Override
+	public TileEntity createNewTileEntity(World world, int meta) {
+        return new TileEntityFluidYellowLuxin(10);
+	}
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void randomDisplayTick(World world, BlockPos pos, IBlockState state, Random rand){
+        super.randomDisplayTick(world, pos, state, rand);
+        double x = pos.getX() + rand.nextDouble();
+        double y = pos.getY() + 0.5;
+        double z = pos.getZ() + rand.nextDouble();
+        if (world.isAirBlock(pos.up())){
+            Minecraft.getMinecraft().effectRenderer.addEffect(new EntityFXLuxinCraft(world, x, y, z, 1, 1, 0));
+        }
+
+    }
 }
