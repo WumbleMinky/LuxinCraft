@@ -48,6 +48,9 @@ public final class Names {
         public static final String SOFT_CLOTH = "soft_cloth";
         public static final String BUCKET = "bucket";
         public static final String BUCKET_YELLOW_LUXIN = "bucket_yellow_luxin";
+        public static final String WIRE = "wire";
+        public static final String POLISHED_IRON = "polished_iron";
+        public static final String SANDPAPER = "sandpaper";
 
         //lenses
         public static final String LENSE_CLEAR = "lense_clear";

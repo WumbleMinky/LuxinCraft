@@ -6,11 +6,16 @@ import com.wumbleminky.luxincraft.reference.Reference;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public abstract class ItemLuxinCraft extends Item {
+public class ItemLuxinCraft extends Item {
 
     public ItemLuxinCraft(){
         super();
         setCreativeTab(CreativeTabLC.LuxinCraftTab);
+    }
+
+    public ItemLuxinCraft(String name){
+        this();
+        setUnlocalizedName(name);
     }
 
     @Override

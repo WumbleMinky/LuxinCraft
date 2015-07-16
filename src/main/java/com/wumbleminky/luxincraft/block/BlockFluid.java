@@ -1,9 +1,7 @@
 package com.wumbleminky.luxincraft.block;
 
 import com.wumbleminky.luxincraft.client.EntityFXLuxinCraft;
-import com.wumbleminky.luxincraft.reference.Colors;
 import com.wumbleminky.luxincraft.tileentity.TileEntityFluidYellowLuxin;
-import com.wumbleminky.luxincraft.utility.LogHelper;
 import com.wumbleminky.luxincraft.utility.PropertyFloat;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
@@ -12,13 +10,9 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.particle.EntityFireworkSparkFX;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.property.ExtendedBlockState;
@@ -37,6 +31,8 @@ public class BlockFluid extends BlockFluidClassic implements ITileEntityProvider
 	public static final PropertyFloat HEIGHT_NW = new PropertyFloat("height_nw", 0F, 1F), HEIGHT_SW = new PropertyFloat("height_sw", 0F, 1F),
 			HEIGHT_SE = new PropertyFloat("height_se", 0F, 1F), HEIGHT_NE = new PropertyFloat("height_ne", 0F, 1F);
 	public static final PropertyFloat FLOW_DIRECTION = new PropertyFloat("flow_direction");
+
+    public static final int DESPAWN_TIME = 6;
 	
 	public BlockFluid(Fluid fluid, Material material, String name){
         super(fluid, material);
@@ -148,7 +144,7 @@ public class BlockFluid extends BlockFluidClassic implements ITileEntityProvider
 
 	@Override
 	public TileEntity createNewTileEntity(World world, int meta) {
-        return new TileEntityFluidYellowLuxin(10);
+        return new TileEntityFluidYellowLuxin(DESPAWN_TIME);
 	}
 
     @Override

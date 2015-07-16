@@ -24,6 +24,9 @@ public class ModItems {
     public static final ItemLuxinCraft garnet = new ItemGarnet();
     public static final ItemLuxinCraft citrine = new ItemCitrine();
     public static final ItemLuxinCraft lense = new ItemLense();
+    public static final ItemLuxinCraft wire = new ItemLuxinCraft(Names.Items.WIRE);
+    public static final ItemLuxinCraft sandpaper = new ItemLuxinCraft(Names.Items.SANDPAPER);
+    public static final ItemLuxinCraft polished_iron = new ItemLuxinCraft(Names.Items.POLISHED_IRON);
 
     //Armours
     public static final ItemArmorLuxinCraft spectacles = new ItemSpectacles();
@@ -39,7 +42,9 @@ public class ModItems {
         GameRegistry.registerItem(citrine, Names.Items.CITRINE);
         GameRegistry.registerItem(spectacles, Names.Armors.SPECTACLES);
         GameRegistry.registerItem(lense, Names.Items.LENSE);
-
+        GameRegistry.registerItem(wire, Names.Items.WIRE);
+        GameRegistry.registerItem(sandpaper, Names.Items.SANDPAPER);
+        GameRegistry.registerItem(polished_iron, Names.Items.POLISHED_IRON);
     }
 
     public static void registerRenders(){
@@ -53,6 +58,9 @@ public class ModItems {
         registerRender(citrine);
         registerRender(spectacles);
         registerRender(lense);
+        registerRender(wire);
+        registerRender(sandpaper);
+        registerRender(polished_iron);
     }
 
     public static void registerRender(Item item){
