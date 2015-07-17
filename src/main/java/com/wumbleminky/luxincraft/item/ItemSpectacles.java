@@ -16,8 +16,7 @@ import java.util.List;
 public class ItemSpectacles extends ItemArmorLuxinCraft {
 
     public ItemSpectacles(){
-        super(Material.Armors.SPECTACLES, 1, 0);
-        setUnlocalizedName(Names.Armors.SPECTACLES);
+        super(Names.Armors.SPECTACLES, Material.Armors.SPECTACLES, 1, ItemArmorLuxinCraft.HELMET_TYPE);
     }
 
     @Override
@@ -30,14 +29,10 @@ public class ItemSpectacles extends ItemArmorLuxinCraft {
     }
 
     @Override
-    public boolean hasColor(ItemStack stack)
-    {
-        if (stack.hasTagCompound() &&
+    public boolean hasColor(ItemStack stack) {
+        return (stack.hasTagCompound() &&
                 stack.getTagCompound().hasKey(Names.NBT.DISPLAY) &&
-                stack.getTagCompound().getCompoundTag(Names.NBT.DISPLAY).hasKey(Names.NBT.COLOR)){
-            return true;
-        }
-        return false;
+                stack.getTagCompound().getCompoundTag(Names.NBT.DISPLAY).hasKey(Names.NBT.COLOR));
     }
 
     @Override

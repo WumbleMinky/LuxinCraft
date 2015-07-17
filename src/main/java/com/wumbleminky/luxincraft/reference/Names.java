@@ -71,6 +71,18 @@ public final class Names {
 
     public static final class Armors {
         public static final String SPECTACLES = "spectacles";
+        public static final String BLUE_LUXIN_HELMET = "blue_luxin_helmet";
+        public static final String BLUE_LUXIN_CHESTPLATE = "blue_luxin_chestplate";
+        public static final String BLUE_LUXIN_LEGGINGS = "blue_luxin_leggings";
+        public static final String BLUE_LUXIN_BOOTS = "blue_luxin_boots";
+        public static final String GREEN_LUXIN_HELMET = "green_luxin_helmet";
+        public static final String GREEN_LUXIN_CHESTPLATE = "green_luxin_chestplate";
+        public static final String GREEN_LUXIN_LEGGINGS = "green_luxin_leggings";
+        public static final String GREEN_LUXIN_BOOTS = "green_luxin_boots";
+        public static final String YELLOW_LUXIN_HELMET = "yellow_luxin_helmet";
+        public static final String YELLOW_LUXIN_CHESTPLATE = "yellow_luxin_chestplate";
+        public static final String YELLOW_LUXIN_LEGGINGS = "yellow_luxin_leggings";
+        public static final String YELLOW_LUXIN_BOOTS = "yellow_luxin_boots";
     }
 
     public static final class Materials {
@@ -79,6 +91,9 @@ public final class Names {
         public static final String YELLOW_LUXIN = "yellow_luxin";
 
         public static final String SPECTACLES = "spectacles";
+        public static final String BLUE_LUXIN_ARMOR = "blue_luxin_armor";
+        public static final String GREEN_LUXIN_ARMOR = "green_luxin_armor";
+        public static final String YELLOW_LUXIN_ARMOR = "yellow_luxin_armor";
     }
 
     public static final class Fluids {

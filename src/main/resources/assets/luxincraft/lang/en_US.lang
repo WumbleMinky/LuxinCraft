@@ -16,6 +16,18 @@ item.bucket.yellow_luxin.name=Yellow Luxin Bucket
 
 #Armors
 item.luxincraft:spectacles.name=Spectacles
+item.luxincraft:blue_luxin_helmet.name=Blue Luxin Helmet
+item.luxincraft:blue_luxin_chestplate.name=Blue Luxin Chestplate
+item.luxincraft:blue_luxin_leggings.name=Blue Luxin Leggings
+item.luxincraft:blue_luxin_boots.name=Blue Luxin Boots
+item.luxincraft:yellow_luxin_helmet.name=Yellow Luxin Helmet
+item.luxincraft:yellow_luxin_chestplate.name=Yellow Luxin Chestplate
+item.luxincraft:yellow_luxin_leggings.name=Yellow Luxin Leggings
+item.luxincraft:yellow_luxin_boots.name=Yellow Luxin Boots
+item.luxincraft:green_luxin_helmet.name=Green Luxin Helmet
+item.luxincraft:green_luxin_chestplate.name=Green Luxin Chestplate
+item.luxincraft:green_luxin_leggings.name=Green Luxin Leggings
+item.luxincraft:green_luxin_boots.name=Green Luxin Boots
 
 # Blocks
 tile.luxincraft:block_blue_luxin_solid.name=Solid Blue Luxin

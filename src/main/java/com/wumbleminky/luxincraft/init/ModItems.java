@@ -8,6 +8,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems {
@@ -30,6 +31,18 @@ public class ModItems {
 
     //Armours
     public static final ItemArmorLuxinCraft spectacles = new ItemSpectacles();
+    public static final ItemArmorLuxinCraft blue_luxin_helmet = new ItemArmorLuxinCraft(Names.Armors.BLUE_LUXIN_HELMET, Material.Armors.BLUE_LUXIN, ItemArmorLuxinCraft.HELMET_TYPE);
+    public static final ItemArmorLuxinCraft blue_luxin_chestplate = new ItemArmorLuxinCraft(Names.Armors.BLUE_LUXIN_CHESTPLATE, Material.Armors.BLUE_LUXIN, ItemArmorLuxinCraft.CHESTPLATE_TYPE);
+    public static final ItemArmorLuxinCraft blue_luxin_leggings = new ItemArmorLuxinCraft(Names.Armors.BLUE_LUXIN_LEGGINGS, Material.Armors.BLUE_LUXIN, ItemArmorLuxinCraft.LEGGINGS_TYPE);
+    public static final ItemArmorLuxinCraft blue_luxin_boots = new ItemArmorLuxinCraft(Names.Armors.BLUE_LUXIN_BOOTS, Material.Armors.BLUE_LUXIN, ItemArmorLuxinCraft.BOOTS_TYPE);
+    public static final ItemArmorLuxinCraft yellow_luxin_helmet = new ItemArmorLuxinCraft(Names.Armors.YELLOW_LUXIN_HELMET, Material.Armors.YELLOW_LUXIN, ItemArmorLuxinCraft.HELMET_TYPE);
+    public static final ItemArmorLuxinCraft yellow_luxin_chestplate = new ItemArmorLuxinCraft(Names.Armors.YELLOW_LUXIN_CHESTPLATE, Material.Armors.YELLOW_LUXIN, ItemArmorLuxinCraft.CHESTPLATE_TYPE);
+    public static final ItemArmorLuxinCraft yellow_luxin_leggings = new ItemArmorLuxinCraft(Names.Armors.YELLOW_LUXIN_LEGGINGS, Material.Armors.YELLOW_LUXIN, ItemArmorLuxinCraft.LEGGINGS_TYPE);
+    public static final ItemArmorLuxinCraft yellow_luxin_boots = new ItemArmorLuxinCraft(Names.Armors.YELLOW_LUXIN_BOOTS, Material.Armors.YELLOW_LUXIN, ItemArmorLuxinCraft.BOOTS_TYPE);
+    public static final ItemArmorLuxinCraft green_luxin_helmet = new ItemArmorLuxinCraft(Names.Armors.GREEN_LUXIN_HELMET, Material.Armors.GREEN_LUXIN, ItemArmorLuxinCraft.HELMET_TYPE);
+    public static final ItemArmorLuxinCraft green_luxin_chestplate = new ItemArmorLuxinCraft(Names.Armors.GREEN_LUXIN_CHESTPLATE, Material.Armors.GREEN_LUXIN, ItemArmorLuxinCraft.CHESTPLATE_TYPE);
+    public static final ItemArmorLuxinCraft green_luxin_leggings = new ItemArmorLuxinCraft(Names.Armors.GREEN_LUXIN_LEGGINGS, Material.Armors.GREEN_LUXIN, ItemArmorLuxinCraft.LEGGINGS_TYPE);
+    public static final ItemArmorLuxinCraft green_luxin_boots = new ItemArmorLuxinCraft(Names.Armors.GREEN_LUXIN_BOOTS, Material.Armors.GREEN_LUXIN, ItemArmorLuxinCraft.BOOTS_TYPE);
 
     public static void init(){
         GameRegistry.registerItem(blueLuxinPickaxe, Names.Tools.BLUE_LUXIN_PICKAXE);
@@ -45,6 +58,18 @@ public class ModItems {
         GameRegistry.registerItem(wire, Names.Items.WIRE);
         GameRegistry.registerItem(sandpaper, Names.Items.SANDPAPER);
         GameRegistry.registerItem(polished_iron, Names.Items.POLISHED_IRON);
+        GameRegistry.registerItem(blue_luxin_helmet, Names.Armors.BLUE_LUXIN_HELMET);
+        GameRegistry.registerItem(blue_luxin_chestplate, Names.Armors.BLUE_LUXIN_CHESTPLATE);
+        GameRegistry.registerItem(blue_luxin_leggings, Names.Armors.BLUE_LUXIN_LEGGINGS);
+        GameRegistry.registerItem(blue_luxin_boots, Names.Armors.BLUE_LUXIN_BOOTS);
+        GameRegistry.registerItem(yellow_luxin_helmet, Names.Armors.YELLOW_LUXIN_HELMET);
+        GameRegistry.registerItem(yellow_luxin_chestplate, Names.Armors.YELLOW_LUXIN_CHESTPLATE);
+        GameRegistry.registerItem(yellow_luxin_leggings, Names.Armors.YELLOW_LUXIN_LEGGINGS);
+        GameRegistry.registerItem(yellow_luxin_boots, Names.Armors.YELLOW_LUXIN_BOOTS);
+        GameRegistry.registerItem(green_luxin_helmet, Names.Armors.GREEN_LUXIN_HELMET);
+        GameRegistry.registerItem(green_luxin_chestplate, Names.Armors.GREEN_LUXIN_CHESTPLATE);
+        GameRegistry.registerItem(green_luxin_leggings, Names.Armors.GREEN_LUXIN_LEGGINGS);
+        GameRegistry.registerItem(green_luxin_boots, Names.Armors.GREEN_LUXIN_BOOTS);
     }
 
     public static void registerRenders(){
@@ -61,6 +86,18 @@ public class ModItems {
         registerRender(wire);
         registerRender(sandpaper);
         registerRender(polished_iron);
+        registerRender(blue_luxin_helmet);
+        registerRender(blue_luxin_chestplate);
+        registerRender(blue_luxin_leggings);
+        registerRender(blue_luxin_boots);
+        registerRender(yellow_luxin_helmet);
+        registerRender(yellow_luxin_chestplate);
+        registerRender(yellow_luxin_leggings);
+        registerRender(yellow_luxin_boots);
+        registerRender(green_luxin_helmet);
+        registerRender(green_luxin_chestplate);
+        registerRender(green_luxin_leggings);
+        registerRender(green_luxin_boots);
     }
 
     public static void registerRender(Item item){

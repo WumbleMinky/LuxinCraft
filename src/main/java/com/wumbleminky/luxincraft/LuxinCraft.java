@@ -38,7 +38,7 @@ public class LuxinCraft {
         ModItems.init();
         ModBlocks.init();
         ModFluids.init();
-        //proxy.registerSided();
+
         proxy.registerVariants();
         proxy.registerKeybindings();
         GameRegistry.registerWorldGenerator(new LuxinCraftWorldGen(), 2);

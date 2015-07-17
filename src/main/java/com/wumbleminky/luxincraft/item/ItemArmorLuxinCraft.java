@@ -8,9 +8,22 @@ import net.minecraft.item.ItemStack;
 
 public class ItemArmorLuxinCraft extends ItemArmor {
 
+    public static final int HELMET_TYPE = 0;
+    public static final int CHESTPLATE_TYPE = 1;
+    public static final int LEGGINGS_TYPE = 2;
+    public static final int BOOTS_TYPE = 3;
+
     public ItemArmorLuxinCraft(ArmorMaterial material, int renderIndex, int armorType){
         super(material, renderIndex, armorType);
         setCreativeTab(CreativeTabLC.LuxinCraftTab);
+    }
+
+    public ItemArmorLuxinCraft(String name, ArmorMaterial material, int renderIndex, int armorType){
+        this(material,renderIndex,armorType);
+        setUnlocalizedName(name);
+    }
+    public ItemArmorLuxinCraft(String name, ArmorMaterial material, int armorType){
+        this(name, material, 0, armorType);
     }
 
     @Override
