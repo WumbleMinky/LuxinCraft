@@ -122,5 +122,6 @@ public final class Names {
     public static final class Textures {
         public static final String STILL_YELLOW_LUXIN = "blocks/fluid_yellow_luxin_still";
         public static final String FLOWING_YELLOW_LUXIN = "blocks/fluid_yellow_luxin_flowing";
+        public static final String HUD_OVERLAY = "/textures/gui/hud_overlay.png";
     }
 }
