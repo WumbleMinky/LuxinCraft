@@ -19,6 +19,15 @@ public class ModItems {
     public static final ItemLuxinSword blue_luxin_sword = new ItemLuxinSword(Material.Tools.BLUE_LUXIN, Names.Tools.BLUE_LUXIN_SWORD);
     public static final ItemLuxinSword green_luxin_sword = new ItemLuxinSword(Material.Tools.GREEN_LUXIN, Names.Tools.GREEN_LUXIN_SWORD);
     public static final ItemLuxinSword yellow_luxin_sword = new ItemLuxinSword(Material.Tools.YELLOW_LUXIN, Names.Tools.YELLOW_LUXIN_SWORD);
+    public static final ItemLuxinShovel blue_luxin_shovel = new ItemLuxinShovel(Material.Tools.BLUE_LUXIN, Names.Tools.BLUE_LUXIN_SHOVEL);
+    public static final ItemLuxinShovel green_luxin_shovel = new ItemLuxinShovel(Material.Tools.GREEN_LUXIN, Names.Tools.GREEN_LUXIN_SHOVEL);
+    public static final ItemLuxinShovel yellow_luxin_shovel = new ItemLuxinShovel(Material.Tools.YELLOW_LUXIN, Names.Tools.YELLOW_LUXIN_SHOVEL);
+    public static final ItemLuxinAxe blue_luxin_axe = new ItemLuxinAxe(Material.Tools.BLUE_LUXIN, Names.Tools.BLUE_LUXIN_AXE);
+    public static final ItemLuxinAxe green_luxin_axe = new ItemLuxinAxe(Material.Tools.GREEN_LUXIN, Names.Tools.GREEN_LUXIN_AXE);
+    public static final ItemLuxinAxe yellow_luxin_axe = new ItemLuxinAxe(Material.Tools.YELLOW_LUXIN, Names.Tools.YELLOW_LUXIN_AXE);
+    public static final ItemLuxinHoe blue_luxin_hoe = new ItemLuxinHoe(Material.Tools.BLUE_LUXIN, Names.Tools.BLUE_LUXIN_HOE);
+    public static final ItemLuxinHoe green_luxin_hoe = new ItemLuxinHoe(Material.Tools.GREEN_LUXIN, Names.Tools.GREEN_LUXIN_HOE);
+    public static final ItemLuxinHoe yellow_luxin_hoe = new ItemLuxinHoe(Material.Tools.YELLOW_LUXIN, Names.Tools.YELLOW_LUXIN_HOE);
 
     //Items
     public static final ItemLuxinCraft softCloth = new ItemSoftCloth();
@@ -75,6 +84,15 @@ public class ModItems {
         GameRegistry.registerItem(blue_luxin_sword, Names.Tools.BLUE_LUXIN_SWORD);
         GameRegistry.registerItem(green_luxin_sword, Names.Tools.GREEN_LUXIN_SWORD);
         GameRegistry.registerItem(yellow_luxin_sword, Names.Tools.YELLOW_LUXIN_SWORD);
+        GameRegistry.registerItem(blue_luxin_shovel, Names.Tools.BLUE_LUXIN_SHOVEL);
+        GameRegistry.registerItem(green_luxin_shovel, Names.Tools.GREEN_LUXIN_SHOVEL);
+        GameRegistry.registerItem(yellow_luxin_shovel, Names.Tools.YELLOW_LUXIN_SHOVEL);
+        GameRegistry.registerItem(blue_luxin_axe, Names.Tools.BLUE_LUXIN_AXE);
+        GameRegistry.registerItem(green_luxin_axe, Names.Tools.GREEN_LUXIN_AXE);
+        GameRegistry.registerItem(yellow_luxin_axe, Names.Tools.YELLOW_LUXIN_AXE);
+        GameRegistry.registerItem(blue_luxin_hoe, Names.Tools.BLUE_LUXIN_HOE);
+        GameRegistry.registerItem(green_luxin_hoe, Names.Tools.GREEN_LUXIN_HOE);
+        GameRegistry.registerItem(yellow_luxin_hoe, Names.Tools.YELLOW_LUXIN_HOE);
     }
 
     public static void registerRenders(){
@@ -106,6 +124,15 @@ public class ModItems {
         registerRender(blue_luxin_sword);
         registerRender(green_luxin_sword);
         registerRender(yellow_luxin_sword);
+        registerRender(blue_luxin_shovel);
+        registerRender(green_luxin_shovel);
+        registerRender(yellow_luxin_shovel);
+        registerRender(blue_luxin_axe);
+        registerRender(green_luxin_axe);
+        registerRender(yellow_luxin_axe);
+        registerRender(blue_luxin_hoe);
+        registerRender(green_luxin_hoe);
+        registerRender(yellow_luxin_hoe);
     }
 
     public static void registerRender(Item item){

@@ -16,6 +16,15 @@ item.luxincraft:yellow_luxin_pickaxe.name=Yellow Luxin Pickaxe
 item.luxincraft:blue_luxin_sword.name=Blue Luxin Sword
 item.luxincraft:green_luxin_sword.name=Green Luxin Sword
 item.luxincraft:yellow_luxin_sword.name=Yellow Luxin Sword
+item.luxincraft:blue_luxin_shovel.name=Blue Luxin Shovel
+item.luxincraft:green_luxin_shovel.name=Green Luxin Shovel
+item.luxincraft:yellow_luxin_shovel.name=Yellow Luxin Shovel
+item.luxincraft:blue_luxin_axe.name=Blue Luxin Axe
+item.luxincraft:green_luxin_axe.name=Green Luxin Axe
+item.luxincraft:yellow_luxin_axe.name=Yellow Luxin Axe
+item.luxincraft:blue_luxin_hoe.name=Blue Luxin Hoe
+item.luxincraft:green_luxin_hoe.name=Green Luxin Hoe
+item.luxincraft:yellow_luxin_hoe.name=Yellow Luxin Hoe
 
 #Buckets
 item.bucket.yellow_luxin.name=Yellow Luxin Bucket

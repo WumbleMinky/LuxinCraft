@@ -110,6 +110,15 @@ public final class Names {
         public static final String BLUE_LUXIN_SWORD = "blue_luxin_sword";
         public static final String GREEN_LUXIN_SWORD = "green_luxin_sword";
         public static final String YELLOW_LUXIN_SWORD = "yellow_luxin_sword";
+        public static final String BLUE_LUXIN_SHOVEL = "blue_luxin_shovel";
+        public static final String GREEN_LUXIN_SHOVEL = "green_luxin_shovel";
+        public static final String YELLOW_LUXIN_SHOVEL = "yellow_luxin_shovel";
+        public static final String BLUE_LUXIN_AXE = "blue_luxin_axe";
+        public static final String GREEN_LUXIN_AXE = "green_luxin_axe";
+        public static final String YELLOW_LUXIN_AXE = "yellow_luxin_axe";
+        public static final String BLUE_LUXIN_HOE = "blue_luxin_hoe";
+        public static final String GREEN_LUXIN_HOE = "green_luxin_hoe";
+        public static final String YELLOW_LUXIN_HOE = "yellow_luxin_hoe";
     }
 
     public static final class NBT {
