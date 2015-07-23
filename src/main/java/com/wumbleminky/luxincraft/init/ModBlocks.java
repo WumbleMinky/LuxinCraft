@@ -3,6 +3,7 @@ package com.wumbleminky.luxincraft.init;
 import com.wumbleminky.luxincraft.block.*;
 import com.wumbleminky.luxincraft.reference.Names;
 import com.wumbleminky.luxincraft.reference.Reference;
+import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -23,16 +24,19 @@ public class ModBlocks {
     public static final BlockLuxinCraft worktable = new BlockWorktable();
 
     public static void init(){
-        GameRegistry.registerBlock(solidYellowLuxin, Names.Blocks.SOLID_YELLOW_LUXIN);
-        GameRegistry.registerBlock(solidGreenLuxin, Names.Blocks.SOLID_GREEN_LUXIN);
-        GameRegistry.registerBlock(solidBlueLuxin, Names.Blocks.SOLID_BLUE_LUXIN);
-        GameRegistry.registerBlock(oreRuby, Names.Blocks.ORE_RUBY);
-        GameRegistry.registerBlock(oreCitrine, Names.Blocks.ORE_CITRINE);
-        GameRegistry.registerBlock(oreSapphire, Names.Blocks.ORE_SAPPHIRE);
-        GameRegistry.registerBlock(oreGarnet, Names.Blocks.ORE_GARNET);
-        GameRegistry.registerBlock(worktable, Names.Blocks.WORKTABLE);
+        register(solidYellowLuxin);
+        register(solidGreenLuxin);
+        register(solidBlueLuxin);
+        register(oreRuby);
+        register(oreCitrine);
+        register(oreSapphire);
+        register(oreGarnet);
+        register(worktable);
     }
 
+    public static void register(Block block){
+        GameRegistry.registerBlock(block, Names.getName(block));
+    }
 
     public static void registerRenders(){
         registerRender(solidBlueLuxin);
@@ -47,6 +51,7 @@ public class ModBlocks {
 
     public static void registerRender(BlockLuxinCraft block){
         ItemModelMesher itemModelMesher = Minecraft.getMinecraft().getRenderItem().getItemModelMesher();
-        itemModelMesher.register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(Reference.withMODID(Names.getName(block)), "inventory"));
+        String resource_name = Reference.withMODID(Names.getName(block));
+        itemModelMesher.register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(resource_name, "inventory"));
     }
 }

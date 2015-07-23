@@ -13,9 +13,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModItems {
 
     //Tools
-    public static final LuxinPickaxe blue_luxin_pickaxe = new LuxinPickaxe(Material.Tools.BLUE_LUXIN, Names.Tools.BLUE_LUXIN_PICKAXE);
-    public static final LuxinPickaxe green_luxin_pickaxe = new LuxinPickaxe(Material.Tools.GREEN_LUXIN, Names.Tools.GREEN_LUXIN_PICKAXE);
-    public static final LuxinPickaxe yellow_luxin_pickaxe = new LuxinPickaxe(Material.Tools.YELLOW_LUXIN, Names.Tools.YELLOW_LUXIN_PICKAXE);
+    public static final ItemLuxinPickaxe blue_luxin_pickaxe = new ItemLuxinPickaxe(Material.Tools.BLUE_LUXIN, Names.Tools.BLUE_LUXIN_PICKAXE);
+    public static final ItemLuxinPickaxe green_luxin_pickaxe = new ItemLuxinPickaxe(Material.Tools.GREEN_LUXIN, Names.Tools.GREEN_LUXIN_PICKAXE);
+    public static final ItemLuxinPickaxe yellow_luxin_pickaxe = new ItemLuxinPickaxe(Material.Tools.YELLOW_LUXIN, Names.Tools.YELLOW_LUXIN_PICKAXE);
     public static final ItemLuxinSword blue_luxin_sword = new ItemLuxinSword(Material.Tools.BLUE_LUXIN, Names.Tools.BLUE_LUXIN_SWORD);
     public static final ItemLuxinSword green_luxin_sword = new ItemLuxinSword(Material.Tools.GREEN_LUXIN, Names.Tools.GREEN_LUXIN_SWORD);
     public static final ItemLuxinSword yellow_luxin_sword = new ItemLuxinSword(Material.Tools.YELLOW_LUXIN, Names.Tools.YELLOW_LUXIN_SWORD);
@@ -56,43 +56,47 @@ public class ModItems {
     public static final ItemArmorLuxinCraft green_luxin_boots = new ItemArmorLuxinCraft(Names.Armors.GREEN_LUXIN_BOOTS, Material.Armors.GREEN_LUXIN, ItemArmorLuxinCraft.BOOTS_TYPE);
 
     public static void init(){
-        GameRegistry.registerItem(blue_luxin_pickaxe, Names.Tools.BLUE_LUXIN_PICKAXE);
-        GameRegistry.registerItem(green_luxin_pickaxe, Names.Tools.GREEN_LUXIN_PICKAXE);
-        GameRegistry.registerItem(yellow_luxin_pickaxe, Names.Tools.YELLOW_LUXIN_PICKAXE);
-        GameRegistry.registerItem(softCloth, Names.Items.SOFT_CLOTH);
-        GameRegistry.registerItem(ruby, Names.Items.RUBY);
-        GameRegistry.registerItem(sapphire, Names.Items.SAPPHIRE);
-        GameRegistry.registerItem(garnet, Names.Items.GARNET);
-        GameRegistry.registerItem(citrine, Names.Items.CITRINE);
-        GameRegistry.registerItem(spectacles, Names.Armors.SPECTACLES);
-        GameRegistry.registerItem(lense, Names.Items.LENSE);
-        GameRegistry.registerItem(wire, Names.Items.WIRE);
-        GameRegistry.registerItem(sandpaper, Names.Items.SANDPAPER);
-        GameRegistry.registerItem(polished_iron, Names.Items.POLISHED_IRON);
-        GameRegistry.registerItem(blue_luxin_helmet, Names.Armors.BLUE_LUXIN_HELMET);
-        GameRegistry.registerItem(blue_luxin_chestplate, Names.Armors.BLUE_LUXIN_CHESTPLATE);
-        GameRegistry.registerItem(blue_luxin_leggings, Names.Armors.BLUE_LUXIN_LEGGINGS);
-        GameRegistry.registerItem(blue_luxin_boots, Names.Armors.BLUE_LUXIN_BOOTS);
-        GameRegistry.registerItem(yellow_luxin_helmet, Names.Armors.YELLOW_LUXIN_HELMET);
-        GameRegistry.registerItem(yellow_luxin_chestplate, Names.Armors.YELLOW_LUXIN_CHESTPLATE);
-        GameRegistry.registerItem(yellow_luxin_leggings, Names.Armors.YELLOW_LUXIN_LEGGINGS);
-        GameRegistry.registerItem(yellow_luxin_boots, Names.Armors.YELLOW_LUXIN_BOOTS);
-        GameRegistry.registerItem(green_luxin_helmet, Names.Armors.GREEN_LUXIN_HELMET);
-        GameRegistry.registerItem(green_luxin_chestplate, Names.Armors.GREEN_LUXIN_CHESTPLATE);
-        GameRegistry.registerItem(green_luxin_leggings, Names.Armors.GREEN_LUXIN_LEGGINGS);
-        GameRegistry.registerItem(green_luxin_boots, Names.Armors.GREEN_LUXIN_BOOTS);
-        GameRegistry.registerItem(blue_luxin_sword, Names.Tools.BLUE_LUXIN_SWORD);
-        GameRegistry.registerItem(green_luxin_sword, Names.Tools.GREEN_LUXIN_SWORD);
-        GameRegistry.registerItem(yellow_luxin_sword, Names.Tools.YELLOW_LUXIN_SWORD);
-        GameRegistry.registerItem(blue_luxin_shovel, Names.Tools.BLUE_LUXIN_SHOVEL);
-        GameRegistry.registerItem(green_luxin_shovel, Names.Tools.GREEN_LUXIN_SHOVEL);
-        GameRegistry.registerItem(yellow_luxin_shovel, Names.Tools.YELLOW_LUXIN_SHOVEL);
-        GameRegistry.registerItem(blue_luxin_axe, Names.Tools.BLUE_LUXIN_AXE);
-        GameRegistry.registerItem(green_luxin_axe, Names.Tools.GREEN_LUXIN_AXE);
-        GameRegistry.registerItem(yellow_luxin_axe, Names.Tools.YELLOW_LUXIN_AXE);
-        GameRegistry.registerItem(blue_luxin_hoe, Names.Tools.BLUE_LUXIN_HOE);
-        GameRegistry.registerItem(green_luxin_hoe, Names.Tools.GREEN_LUXIN_HOE);
-        GameRegistry.registerItem(yellow_luxin_hoe, Names.Tools.YELLOW_LUXIN_HOE);
+        register(blue_luxin_pickaxe);
+        register(green_luxin_pickaxe);
+        register(yellow_luxin_pickaxe);
+        register(softCloth);
+        register(ruby);
+        register(sapphire);
+        register(garnet);
+        register(citrine);
+        register(spectacles);
+        register(lense);
+        register(wire);
+        register(sandpaper);
+        register(polished_iron);
+        register(blue_luxin_helmet);
+        register(blue_luxin_chestplate);
+        register(blue_luxin_leggings);
+        register(blue_luxin_boots);
+        register(yellow_luxin_helmet);
+        register(yellow_luxin_chestplate);
+        register(yellow_luxin_leggings);
+        register(yellow_luxin_boots);
+        register(green_luxin_helmet);
+        register(green_luxin_chestplate);
+        register(green_luxin_leggings);
+        register(green_luxin_boots);
+        register(blue_luxin_sword);
+        register(green_luxin_sword);
+        register(yellow_luxin_sword);
+        register(blue_luxin_shovel);
+        register(green_luxin_shovel);
+        register(yellow_luxin_shovel);
+        register(blue_luxin_axe);
+        register(green_luxin_axe);
+        register(yellow_luxin_axe);
+        register(blue_luxin_hoe);
+        register(green_luxin_hoe);
+        register(yellow_luxin_hoe);
+    }
+
+    public static void register(Item item){
+        GameRegistry.registerItem(item, Names.getName(item));
     }
 
     public static void registerRenders(){

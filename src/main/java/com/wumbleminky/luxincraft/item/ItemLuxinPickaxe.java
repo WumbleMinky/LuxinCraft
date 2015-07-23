@@ -6,9 +6,9 @@ import com.wumbleminky.luxincraft.reference.Reference;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 
-public class LuxinPickaxe extends ItemPickaxe{
+public class ItemLuxinPickaxe extends ItemPickaxe{
 
-    public LuxinPickaxe(ToolMaterial material, String name) {
+    public ItemLuxinPickaxe(ToolMaterial material, String name) {
         super(material);
         setCreativeTab(CreativeTabLC.LuxinCraftTab);
         this.setUnlocalizedName(name);
