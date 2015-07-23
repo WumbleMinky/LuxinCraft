@@ -1,7 +1,4 @@
 # Items
-item.luxincraft:blue_luxin_pickaxe.name=Blue Luxin Pickaxe
-item.luxincraft:green_luxin_pickaxe.name=Green Luxin Pickaxe
-item.luxincraft:yellow_luxin_pickaxe.name=Yellow Luxin Pickaxe
 item.luxincraft:soft_cloth.name=Soft Cloth
 item.luxincraft:ruby.name=Ruby
 item.luxincraft:sapphire.name=Sapphire
@@ -12,6 +9,15 @@ item.luxincraft:wire.name=Wire
 item.luxincraft:sandpaper.name=Sandpaper
 item.luxincraft:polished_iron.name=Polished Iron
 
+#Tools
+item.luxincraft:blue_luxin_pickaxe.name=Blue Luxin Pickaxe
+item.luxincraft:green_luxin_pickaxe.name=Green Luxin Pickaxe
+item.luxincraft:yellow_luxin_pickaxe.name=Yellow Luxin Pickaxe
+item.luxincraft:blue_luxin_sword.name=Blue Luxin Sword
+item.luxincraft:green_luxin_sword.name=Green Luxin Sword
+item.luxincraft:yellow_luxin_sword.name=Yellow Luxin Sword
+
+#Buckets
 item.bucket.yellow_luxin.name=Yellow Luxin Bucket
 
 #Armors

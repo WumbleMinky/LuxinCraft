@@ -8,15 +8,17 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems {
 
     //Tools
-    public static final LuxinPickaxe blueLuxinPickaxe = new LuxinPickaxe(Material.Tools.BLUE_LUXIN, Names.Tools.BLUE_LUXIN_PICKAXE);
-    public static final LuxinPickaxe greenLuxinPickaxe = new LuxinPickaxe(Material.Tools.GREEN_LUXIN, Names.Tools.GREEN_LUXIN_PICKAXE);
-    public static final LuxinPickaxe yellowLuxinPickaxe = new LuxinPickaxe(Material.Tools.YELLOW_LUXIN, Names.Tools.YELLOW_LUXIN_PICKAXE);
+    public static final LuxinPickaxe blue_luxin_pickaxe = new LuxinPickaxe(Material.Tools.BLUE_LUXIN, Names.Tools.BLUE_LUXIN_PICKAXE);
+    public static final LuxinPickaxe green_luxin_pickaxe = new LuxinPickaxe(Material.Tools.GREEN_LUXIN, Names.Tools.GREEN_LUXIN_PICKAXE);
+    public static final LuxinPickaxe yellow_luxin_pickaxe = new LuxinPickaxe(Material.Tools.YELLOW_LUXIN, Names.Tools.YELLOW_LUXIN_PICKAXE);
+    public static final ItemLuxinSword blue_luxin_sword = new ItemLuxinSword(Material.Tools.BLUE_LUXIN, Names.Tools.BLUE_LUXIN_SWORD);
+    public static final ItemLuxinSword green_luxin_sword = new ItemLuxinSword(Material.Tools.GREEN_LUXIN, Names.Tools.GREEN_LUXIN_SWORD);
+    public static final ItemLuxinSword yellow_luxin_sword = new ItemLuxinSword(Material.Tools.YELLOW_LUXIN, Names.Tools.YELLOW_LUXIN_SWORD);
 
     //Items
     public static final ItemLuxinCraft softCloth = new ItemSoftCloth();
@@ -45,9 +47,9 @@ public class ModItems {
     public static final ItemArmorLuxinCraft green_luxin_boots = new ItemArmorLuxinCraft(Names.Armors.GREEN_LUXIN_BOOTS, Material.Armors.GREEN_LUXIN, ItemArmorLuxinCraft.BOOTS_TYPE);
 
     public static void init(){
-        GameRegistry.registerItem(blueLuxinPickaxe, Names.Tools.BLUE_LUXIN_PICKAXE);
-        GameRegistry.registerItem(greenLuxinPickaxe, Names.Tools.GREEN_LUXIN_PICKAXE);
-        GameRegistry.registerItem(yellowLuxinPickaxe, Names.Tools.YELLOW_LUXIN_PICKAXE);
+        GameRegistry.registerItem(blue_luxin_pickaxe, Names.Tools.BLUE_LUXIN_PICKAXE);
+        GameRegistry.registerItem(green_luxin_pickaxe, Names.Tools.GREEN_LUXIN_PICKAXE);
+        GameRegistry.registerItem(yellow_luxin_pickaxe, Names.Tools.YELLOW_LUXIN_PICKAXE);
         GameRegistry.registerItem(softCloth, Names.Items.SOFT_CLOTH);
         GameRegistry.registerItem(ruby, Names.Items.RUBY);
         GameRegistry.registerItem(sapphire, Names.Items.SAPPHIRE);
@@ -70,12 +72,15 @@ public class ModItems {
         GameRegistry.registerItem(green_luxin_chestplate, Names.Armors.GREEN_LUXIN_CHESTPLATE);
         GameRegistry.registerItem(green_luxin_leggings, Names.Armors.GREEN_LUXIN_LEGGINGS);
         GameRegistry.registerItem(green_luxin_boots, Names.Armors.GREEN_LUXIN_BOOTS);
+        GameRegistry.registerItem(blue_luxin_sword, Names.Tools.BLUE_LUXIN_SWORD);
+        GameRegistry.registerItem(green_luxin_sword, Names.Tools.GREEN_LUXIN_SWORD);
+        GameRegistry.registerItem(yellow_luxin_sword, Names.Tools.YELLOW_LUXIN_SWORD);
     }
 
     public static void registerRenders(){
-        registerRender(blueLuxinPickaxe);
-        registerRender(greenLuxinPickaxe);
-        registerRender(yellowLuxinPickaxe);
+        registerRender(blue_luxin_pickaxe);
+        registerRender(green_luxin_pickaxe);
+        registerRender(yellow_luxin_pickaxe);
         registerRender(softCloth);
         registerRender(ruby);
         registerRender(sapphire);
@@ -98,6 +103,9 @@ public class ModItems {
         registerRender(green_luxin_chestplate);
         registerRender(green_luxin_leggings);
         registerRender(green_luxin_boots);
+        registerRender(blue_luxin_sword);
+        registerRender(green_luxin_sword);
+        registerRender(yellow_luxin_sword);
     }
 
     public static void registerRender(Item item){

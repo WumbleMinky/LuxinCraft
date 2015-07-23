@@ -4,8 +4,6 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 public final class Names {
 
@@ -109,6 +107,9 @@ public final class Names {
         public static final String BLUE_LUXIN_PICKAXE = "blue_luxin_pickaxe";
         public static final String GREEN_LUXIN_PICKAXE = "green_luxin_pickaxe";
         public static final String YELLOW_LUXIN_PICKAXE = "yellow_luxin_pickaxe";
+        public static final String BLUE_LUXIN_SWORD = "blue_luxin_sword";
+        public static final String GREEN_LUXIN_SWORD = "green_luxin_sword";
+        public static final String YELLOW_LUXIN_SWORD = "yellow_luxin_sword";
     }
 
     public static final class NBT {

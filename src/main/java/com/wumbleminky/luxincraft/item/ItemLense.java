@@ -34,12 +34,9 @@ public class ItemLense extends ItemLuxinCraft {
 
     public boolean hasColor(ItemStack stack)
     {
-        if (stack.hasTagCompound() &&
+        return (stack.hasTagCompound() &&
                 stack.getTagCompound().hasKey(Names.NBT.DISPLAY) &&
-                stack.getTagCompound().getCompoundTag(Names.NBT.DISPLAY).hasKey(Names.NBT.COLOR)){
-            return true;
-        }
-        return false;
+                stack.getTagCompound().getCompoundTag(Names.NBT.DISPLAY).hasKey(Names.NBT.COLOR));
     }
 
     public int getColor(ItemStack stack){

@@ -9,7 +9,7 @@ public class CreativeTabLC {
     public static final CreativeTabs LuxinCraftTab = new CreativeTabs(Reference.MOD_ID) {
         @Override
         public Item getTabIconItem() {
-            return ModItems.blueLuxinPickaxe;
+            return ModItems.blue_luxin_pickaxe;
         }
 
         @Override
