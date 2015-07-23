@@ -2,9 +2,7 @@ package com.wumbleminky.luxincraft.block;
 
 import com.wumbleminky.luxincraft.init.ModItems;
 import com.wumbleminky.luxincraft.reference.Names;
-import com.wumbleminky.luxincraft.utility.LogHelper;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 
 import java.util.Random;

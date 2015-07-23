@@ -31,10 +31,10 @@ public class ModItems {
 
     //Items
     public static final ItemLuxinCraft softCloth = new ItemSoftCloth();
-    public static final ItemLuxinCraft ruby = new ItemRuby();
-    public static final ItemLuxinCraft sapphire = new ItemSapphire();
-    public static final ItemLuxinCraft garnet = new ItemGarnet();
-    public static final ItemLuxinCraft citrine = new ItemCitrine();
+    public static final ItemLuxinCraft ruby = new ItemGem(Names.Items.RUBY);
+    public static final ItemLuxinCraft sapphire = new ItemGem(Names.Items.SAPPHIRE);
+    public static final ItemLuxinCraft garnet = new ItemGem(Names.Items.GARNET);
+    public static final ItemLuxinCraft citrine = new ItemGem(Names.Items.CITRINE);
     public static final ItemLuxinCraft lense = new ItemLense();
     public static final ItemLuxinCraft wire = new ItemLuxinCraft(Names.Items.WIRE);
     public static final ItemLuxinCraft sandpaper = new ItemLuxinCraft(Names.Items.SANDPAPER);

@@ -15,12 +15,11 @@ import java.util.List;
 public class ItemLense extends ItemLuxinCraft {
 
     public ItemLense(){
-        super();
+        super(Names.Items.LENSE);
         this.setMaxStackSize(1);
         this.setMaxDamage(64);
         this.setHasSubtypes(false);
         this.setNoRepair();
-        this.setUnlocalizedName(Names.Items.LENSE);
     }
 
     @Override
