@@ -8,6 +8,10 @@ item.luxincraft:lense.name=Lense
 item.luxincraft:wire.name=Wire
 item.luxincraft:sandpaper.name=Sandpaper
 item.luxincraft:polished_iron.name=Polished Iron
+item.luxincraft:cloth_wheel.name=Cloth Polishing Wheel
+item.luxincraft:stone_grinding_wheel.name=Stone Grinding Wheel
+item.luxincraft:iron_grinding_wheel.name=Iron Grinding Wheel
+item.luxincraft:diamond_grinding_wheel.name=Diamond Grinding Wheel
 
 #Tools
 item.luxincraft:blue_luxin_pickaxe.name=Blue Luxin Pickaxe

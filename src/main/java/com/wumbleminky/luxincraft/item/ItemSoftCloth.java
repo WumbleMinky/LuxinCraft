@@ -7,6 +7,7 @@ public class ItemSoftCloth extends ItemLuxinCraft {
     public ItemSoftCloth(){
         super();
         this.setUnlocalizedName(Names.Items.SOFT_CLOTH);
+        this.setMaxStackSize(1);
     }
 
 }

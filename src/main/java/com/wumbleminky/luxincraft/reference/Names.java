@@ -49,6 +49,10 @@ public final class Names {
         public static final String WIRE = "wire";
         public static final String POLISHED_IRON = "polished_iron";
         public static final String SANDPAPER = "sandpaper";
+        public static final String CLOTH_WHEEL = "cloth_wheel";
+        public static final String STONE_GRINDING_WHEEL = "stone_grinding_wheel";
+        public static final String IRON_GRINDING_WHEEL = "iron_grinding_wheel";
+        public static final String DIAMOND_GRINDING_WHEEL = "diamond_grinding_wheel";
 
         //lenses
         public static final String LENSE_CLEAR = "lense_clear";

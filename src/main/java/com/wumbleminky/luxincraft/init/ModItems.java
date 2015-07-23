@@ -31,14 +31,18 @@ public class ModItems {
 
     //Items
     public static final ItemLuxinCraft softCloth = new ItemSoftCloth();
+    public static final ItemLuxinCraft sandpaper = new ItemSandpaper();
     public static final ItemLuxinCraft ruby = new ItemGem(Names.Items.RUBY);
     public static final ItemLuxinCraft sapphire = new ItemGem(Names.Items.SAPPHIRE);
     public static final ItemLuxinCraft garnet = new ItemGem(Names.Items.GARNET);
     public static final ItemLuxinCraft citrine = new ItemGem(Names.Items.CITRINE);
     public static final ItemLuxinCraft lense = new ItemLense();
     public static final ItemLuxinCraft wire = new ItemLuxinCraft(Names.Items.WIRE);
-    public static final ItemLuxinCraft sandpaper = new ItemLuxinCraft(Names.Items.SANDPAPER);
     public static final ItemLuxinCraft polished_iron = new ItemLuxinCraft(Names.Items.POLISHED_IRON);
+    public static final ItemLuxinCraft cloth_wheel = new ItemWheel(Names.Items.CLOTH_WHEEL);
+    public static final ItemLuxinCraft stone_grinding_wheel = new ItemWheel(Names.Items.STONE_GRINDING_WHEEL);
+    public static final ItemLuxinCraft iron_grinding_wheel = new ItemWheel(Names.Items.IRON_GRINDING_WHEEL);
+    public static final ItemLuxinCraft diamond_grinding_wheel = new ItemWheel(Names.Items.DIAMOND_GRINDING_WHEEL);
 
     //Armours
     public static final ItemArmorLuxinCraft spectacles = new ItemSpectacles();
@@ -56,9 +60,7 @@ public class ModItems {
     public static final ItemArmorLuxinCraft green_luxin_boots = new ItemArmorLuxinCraft(Names.Armors.GREEN_LUXIN_BOOTS, Material.Armors.GREEN_LUXIN, ItemArmorLuxinCraft.BOOTS_TYPE);
 
     public static void init(){
-        register(blue_luxin_pickaxe);
-        register(green_luxin_pickaxe);
-        register(yellow_luxin_pickaxe);
+
         register(softCloth);
         register(ruby);
         register(sapphire);
@@ -69,6 +71,12 @@ public class ModItems {
         register(wire);
         register(sandpaper);
         register(polished_iron);
+        register(cloth_wheel);
+        register(stone_grinding_wheel);
+        register(iron_grinding_wheel);
+        register(diamond_grinding_wheel);
+
+        //Armors
         register(blue_luxin_helmet);
         register(blue_luxin_chestplate);
         register(blue_luxin_leggings);
@@ -81,6 +89,11 @@ public class ModItems {
         register(green_luxin_chestplate);
         register(green_luxin_leggings);
         register(green_luxin_boots);
+
+        //Tools
+        register(blue_luxin_pickaxe);
+        register(green_luxin_pickaxe);
+        register(yellow_luxin_pickaxe);
         register(blue_luxin_sword);
         register(green_luxin_sword);
         register(yellow_luxin_sword);
@@ -100,9 +113,7 @@ public class ModItems {
     }
 
     public static void registerRenders(){
-        registerRender(blue_luxin_pickaxe);
-        registerRender(green_luxin_pickaxe);
-        registerRender(yellow_luxin_pickaxe);
+
         registerRender(softCloth);
         registerRender(ruby);
         registerRender(sapphire);
@@ -113,6 +124,12 @@ public class ModItems {
         registerRender(wire);
         registerRender(sandpaper);
         registerRender(polished_iron);
+        registerRender(cloth_wheel);
+        registerRender(stone_grinding_wheel);
+        registerRender(iron_grinding_wheel);
+        registerRender(diamond_grinding_wheel);
+
+        //Armors
         registerRender(blue_luxin_helmet);
         registerRender(blue_luxin_chestplate);
         registerRender(blue_luxin_leggings);
@@ -125,6 +142,11 @@ public class ModItems {
         registerRender(green_luxin_chestplate);
         registerRender(green_luxin_leggings);
         registerRender(green_luxin_boots);
+
+        //Tools
+        registerRender(blue_luxin_pickaxe);
+        registerRender(green_luxin_pickaxe);
+        registerRender(yellow_luxin_pickaxe);
         registerRender(blue_luxin_sword);
         registerRender(green_luxin_sword);
         registerRender(yellow_luxin_sword);
