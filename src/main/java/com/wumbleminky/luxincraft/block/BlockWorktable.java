@@ -1,6 +1,10 @@
 package com.wumbleminky.luxincraft.block;
 
+import com.wumbleminky.luxincraft.init.ModItems;
+import com.wumbleminky.luxincraft.item.ItemLense;
+import com.wumbleminky.luxincraft.reference.Colors;
 import com.wumbleminky.luxincraft.reference.Names;
+import com.wumbleminky.luxincraft.reference.WorktableRecipes;
 import com.wumbleminky.luxincraft.tileentity.TileEntityWorktable;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
@@ -10,6 +14,8 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
@@ -52,21 +58,37 @@ public class BlockWorktable extends BlockLuxinCraft implements ITileEntityProvid
             TileEntity te  = world.getTileEntity(pos);
             if (te instanceof TileEntityWorktable){
                 TileEntityWorktable tileEntityWorktable = (TileEntityWorktable)te;
-                //remove the current item
+
+                //Remove the current item or perform work on the item
                 if (tileEntityWorktable.hasInventory()){
                     ItemStack inventory = tileEntityWorktable.getInventory();
-                    //try to add the item to the player's inventory
-                    if (player.inventory.addItemStackToInventory(inventory)){
+
+                    //perform work on the item on the worktable
+                    if (equipped != null && WorktableRecipes.hasRecipe(equipped.getItem(), inventory.getItem())) {
+                        Item equipped_item = equipped.getItem();
+                        //set the amount of work if has not been set
+                        if (!tileEntityWorktable.hasWork() && WorktableRecipes.getWork(equipped_item, inventory.getItem()) > 0){
+                            tileEntityWorktable.setWorkRemaining(WorktableRecipes.getWork(equipped_item, inventory.getItem()));
+                        }
+                        equipped.damageItem(1, player);
+
+                        //perform work on the wortable item, if it finishes, update the inventory
+                        if (tileEntityWorktable.doWork()){
+                            tileEntityWorktable.setInventory(WorktableRecipes.getOutput(equipped_item, inventory.getItem()));
+                        }
+                    //try to add the item to the player's inventory)
+                    }else if (player.inventory.addItemStackToInventory(inventory)){
                         player.inventoryContainer.detectAndSendChanges();
                         if (player instanceof EntityPlayerMP){
                             ((EntityPlayerMP) player).worldObj.playSoundAtEntity(player,"random.pop", 0.2F, 2.0F);
                         }
+                        tileEntityWorktable.clearInventory();
                     }else{
                         //Spawn item at player's feet in case inventory is full
-                        EntityItem itemEntity = new EntityItem(world, player.posX + 0.5D, player.posY + 0.5D, player.posZ + 0.5D,inventory);
+                        EntityItem itemEntity = new EntityItem(world, player.posX + 0.5D, player.posY + 0.5D, player.posZ + 0.5D, inventory);
                         world.spawnEntityInWorld(itemEntity);
+                        tileEntityWorktable.clearInventory();
                     }
-                    tileEntityWorktable.clearInventory();
                 //add an item
                 }else{
                     if (equipped != null){

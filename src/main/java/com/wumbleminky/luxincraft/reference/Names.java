@@ -130,6 +130,7 @@ public final class Names {
         public static final String COLOR = "luxincolor";
         public static final String INVENTORY = "inventory";
         public static final String FACING = "facing";
+        public static final String WORK_REMAINING = "workRemaining";
         public static final String LIFESPAN_IN_TICKS = "lifespanInTicks";
     }
 
@@ -137,5 +138,9 @@ public final class Names {
         public static final String STILL_YELLOW_LUXIN = "blocks/fluid_yellow_luxin_still";
         public static final String FLOWING_YELLOW_LUXIN = "blocks/fluid_yellow_luxin_flowing";
         public static final String HUD_OVERLAY = "/textures/gui/hud_overlay.png";
+    }
+
+    public static final class Misc {
+        public static final String CLEAR_LENSE_TEXT = "Clear";
     }
 }

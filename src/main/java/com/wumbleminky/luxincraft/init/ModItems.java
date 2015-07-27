@@ -36,7 +36,7 @@ public class ModItems {
     public static final ItemLuxinCraft sapphire = new ItemGem(Names.Items.SAPPHIRE);
     public static final ItemLuxinCraft garnet = new ItemGem(Names.Items.GARNET);
     public static final ItemLuxinCraft citrine = new ItemGem(Names.Items.CITRINE);
-    public static final ItemLuxinCraft lense = new ItemLense();
+    public static final ItemLense lense = new ItemLense();
     public static final ItemLuxinCraft wire = new ItemLuxinCraft(Names.Items.WIRE);
     public static final ItemLuxinCraft polished_iron = new ItemLuxinCraft(Names.Items.POLISHED_IRON);
     public static final ItemLuxinCraft cloth_wheel = new ItemWheel(Names.Items.CLOTH_WHEEL);

@@ -1,5 +1,6 @@
 package com.wumbleminky.luxincraft.item;
 
+import com.wumbleminky.luxincraft.init.ModItems;
 import com.wumbleminky.luxincraft.reference.Colors;
 import com.wumbleminky.luxincraft.reference.Names;
 import net.minecraft.creativetab.CreativeTabs;
@@ -78,21 +79,29 @@ public class ItemLense extends ItemLuxinCraft {
     @SideOnly(Side.CLIENT)
     public void getSubItems(Item itemIn, CreativeTabs tab, List subItems){
         for (int color: Colors.Luxin.COLORS){
-            ItemStack itemStack = new ItemStack(itemIn, 1, 0);
-            setColor(itemStack, color);
-            subItems.add(itemStack);
+            subItems.add(getColoredLense(color));
         }
+        subItems.add(getColoredLense(Colors.WHITE));
     }
 
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List tooltip, boolean advanced) {
         if (hasColor(stack)){
-            String colorInt = Integer.toString(getColor(stack));
+            int color = getColor(stack);
+            String colorInt = Integer.toString(color);
             if (Colors.LUXIN_TO_TEXT_MAP.containsKey(colorInt)){
                 tooltip.add(Colors.LUXIN_TO_TEXT_MAP.get(colorInt)[0] + Colors.LUXIN_TO_TEXT_MAP.get(colorInt)[1]);
+            }else if (color == Colors.WHITE){
+                tooltip.add(Names.Misc.CLEAR_LENSE_TEXT);
             }
 
 
         }
+    }
+
+    public static ItemStack getColoredLense(int color){
+        ItemStack stack = new ItemStack(ModItems.lense, 1, 0);
+        ModItems.lense.setColor(stack, color);
+        return stack;
     }
 }
