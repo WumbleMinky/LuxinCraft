@@ -15,7 +15,7 @@ import java.util.Map;
 
 public class WorktableRecipes {
 
-    public static WorktableRecipes instance = new WorktableRecipes();
+    public static WorktableRecipes instance;
 
     private Map<Item, ToolRecipe> work_list= new HashMap<Item, ToolRecipe>();
 
@@ -28,6 +28,10 @@ public class WorktableRecipes {
         addRecipe(ModItems.sandpaper, ModItems.sapphire, ItemLense.getColoredLense(Colors.Luxin.BLUE), 5);
         addRecipe(ModItems.sandpaper, ModItems.citrine, ItemLense.getColoredLense(Colors.Luxin.YELLOW), 5);
         addRecipe(ModItems.sandpaper, Items.emerald, ItemLense.getColoredLense(Colors.Luxin.GREEN), 5);
+    }
+
+    public static void init(){
+        instance = new WorktableRecipes();
     }
 
     public void addRecipe(Item tool, Block input, ItemStack result, int work){

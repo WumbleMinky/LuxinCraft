@@ -8,6 +8,7 @@ import com.wumbleminky.luxincraft.init.ModItems;
 import com.wumbleminky.luxincraft.init.TileEntities;
 import com.wumbleminky.luxincraft.proxy.IProxy;
 import com.wumbleminky.luxincraft.reference.Reference;
+import com.wumbleminky.luxincraft.reference.WorktableRecipes;
 import com.wumbleminky.luxincraft.worldgen.LuxinCraftWorldGen;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLCommonHandler;
@@ -52,6 +53,6 @@ public class LuxinCraft {
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event){
-
+        WorktableRecipes.init();
     }
 }
